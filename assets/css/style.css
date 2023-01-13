@@ -13,5 +13,28 @@ body {
 }
 
 header {
-    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    max-height: 200px;
+}
+
+/* starting the layout of the game-area section, trying to create enough space for the different game mods, so the
+size of the area won't change for different game types. */
+.game-area {
+    width: 80%;
+    background-color: blue;
+    display: grid;
+    grid-auto-rows: 5vh, 1fr;
+    grid-template-areas: 
+   "title title"
+    "nothing nothing";
+     
+}
+
+.buttons {
+    grid-area: title;
+    min-height: 6vh;
+
 }
