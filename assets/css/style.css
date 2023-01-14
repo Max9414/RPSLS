@@ -13,25 +13,29 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    font-size: 2rem;
     min-height: 200px;
     height: 20%;
 }
 
-/* starting the layout of the game-area section, trying to create enough space for the different game mods, so the
+/* layout of the game-area section, trying to create enough space for the different game mods, so the
 size of the area won't change for different game types. */
 .game-area {
-    width: 80%;
+    width: 100%;
+    height: 60%;
     background-color: blue;
-    display: grid;
-    grid-auto-rows: 5vh, 1fr;
-    grid-template-areas: 
-   "title title"
-    "nothing nothing"
-    "score score";
 }
 
 .buttons {
     grid-area: title;
-    min-height: 6vh;
+    font-size: 6rem;
+    padding: 200px;
+}
 
+/* Simple result showcase for pc and human player score */
+
+.game-result {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-evenly;
 }
