@@ -18,6 +18,16 @@ header {
     height: 20%;
 }
 
+.img-div {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.img-div img {
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
 /* layout of the game-area section, trying to create enough space for the different game mods, so the
 size of the area won't change for different game types. */
 .game-area {
