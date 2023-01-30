@@ -26,21 +26,23 @@ function cardSelected(event) {
 function playOriginalGame(event) {
     let game = document.getElementById('game-area')
     game.innerHTML = `
-    <button id="rock">
+    <button class="card" id="rock">
       <img src="rock.png" alt="Rock">
     </button>
-    <button id="paper">
+    <button class="card" id="paper">
       <img src="paper.png" alt="Paper">
     </button>
-    <button id="scissors">
+    <button class="card" id="scissors">
       <img src="scissors.png" alt="Scissors">
     </button>
-    <button id="lizard">
+    <button class="card" id="lizard">
       <img src="lizard.png" alt="Lizard">
     </button>
-    <button id="spock">
+    <button class="card" id="spock">
       <img src="spock.png" alt="Spock">
     </button>`
+
+    document.getElementById('game-area').children = game;
 }
 
 /**
