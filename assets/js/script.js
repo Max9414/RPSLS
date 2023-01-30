@@ -9,8 +9,14 @@ function randomCard () {
     return `$randomFigures`;
 }
 
+// card selection check
 function cardSelected(event) {
-    
+    let confirmed = confirm ("Are you sure you want to select this card?");
+    if confirmed {
+        console.log("you selected this card");
+    } else {
+        console.log("select again");
+    }
 }
 
 /**
@@ -18,7 +24,23 @@ function cardSelected(event) {
  * The game in question is the normal one, user can select the card normally and play the game
  */
 function playOriginalGame(event) {
-
+    let game = document.getElementById('game-area')
+    game.innerHTML = `
+    <button id="rock">
+      <img src="rock.png" alt="Rock">
+    </button>
+    <button id="paper">
+      <img src="paper.png" alt="Paper">
+    </button>
+    <button id="scissors">
+      <img src="scissors.png" alt="Scissors">
+    </button>
+    <button id="lizard">
+      <img src="lizard.png" alt="Lizard">
+    </button>
+    <button id="spock">
+      <img src="spock.png" alt="Spock">
+    </button>`
 }
 
 /**
