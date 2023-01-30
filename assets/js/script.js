@@ -1,19 +1,35 @@
 
-let cards = document.getElementsByClassName('card');
+// window.addEventListener('DOMContentLoaded', (event) => {
+//     console.log('DOM fully loaded and parsed');
+    
+// });
+
+window.onload = (event) => {
+    console.log("page is fully loaded");
+    // Event listeners for the 3 different games
+    document.getElementById('game-btn1').addEventListener('click', playOriginalGame)
+  };
 
 /**
  * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
  */
 function randomCard () {
     let randomFigures = cards[Math.floor(Math.random() * cards.length)];
-    return `$randomFigures`;
+    return `${randomFigures}`; 
+}
+
+function solution (card) {
+    console.log(card);
 }
 
 // card selection check
 function cardSelected(event) {
+    
     let confirmed = confirm ("Are you sure you want to select this card?");
-    if confirmed {
+    if (confirmed) {
         console.log("you selected this card");
+        const card = randomCard();
+        solution(card)
     } else {
         console.log("select again");
     }
@@ -42,7 +58,13 @@ function playOriginalGame(event) {
       <img src="spock.png" alt="Spock">
     </button>`
 
-    document.getElementById('game-area').children = game;
+    let cards = document.getElementsByClassName('card');
+    console.log(cards)
+
+    // Event listener for chosen card by player
+    for (let card in cards) {
+    cards[card].addEventListener('click', cardSelected);
+}
 }
 
 /**
@@ -63,10 +85,5 @@ function PlayRandomGame(event) {
      
 }
 
-// Event listener for chosen card by player
-for (let card in cards) {
-    cards[card].addEventListener('click', cardSelected);
-}
 
-// Event listeners for the 3 different games
-document.getElementById('game-btn1').addEventListener('click', playOriginalGame)
+
