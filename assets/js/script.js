@@ -9,6 +9,9 @@ function randomCard () {
     return `$randomFigures`;
 }
 
+function cardSelected(event) {
+    
+}
 
 /**
  * This function will create the whole HTML necessary for the first game to work
@@ -36,8 +39,7 @@ function PlayRandomGame(event) {
      
 }
 
-let buttons = document.getElementsByClassName("btn");
-
-for (button of buttons) {
-    
+// Event listener for chosen card by player
+for (let card in cards) {
+    cards[card].addEventListener('click', cardSelected);
 }
