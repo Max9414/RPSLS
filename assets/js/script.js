@@ -41,6 +41,7 @@ function cardSelected(event) {
  */
 function playOriginalGame(event) {
     let game = document.getElementById('game-area')
+    game.classList.add('cards-bttm');
     game.innerHTML = `
     <button class="card" id="rock">
       <img src="rock.png" alt="Rock">
