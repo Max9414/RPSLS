@@ -65,3 +65,6 @@ function PlayRandomGame(event) {
 for (let card in cards) {
     cards[card].addEventListener('click', cardSelected);
 }
+
+// Event listeners for the 3 different games
+document.getElementById('game-btn1').addEventListener('click', playOriginalGame)
