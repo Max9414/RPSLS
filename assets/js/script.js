@@ -1,3 +1,6 @@
+
+let cards = document.getElementsByClassName('card');
+
 /**
  * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
  */
