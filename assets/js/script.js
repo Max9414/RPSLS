@@ -7,7 +7,8 @@
 window.onload = (event) => {
     console.log("page is fully loaded");
     // Event listeners for the 3 different games
-    document.getElementById('game-btn1').addEventListener('click', playOriginalGame)
+    document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
+    document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
   };
 
 /**
@@ -110,6 +111,7 @@ function playFivevFiveGame(event) {
     for (let card in cards) {
     cards[card].addEventListener('click', fullSelection);
 }
+}
 
 /**
  * This function will create the whole HTML necessary for the third game to work
@@ -119,6 +121,4 @@ function playFivevFiveGame(event) {
 function PlayRandomGame(event) {
      
 }
-
-
 
