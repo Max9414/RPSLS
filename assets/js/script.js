@@ -19,6 +19,11 @@ function randomCard () {
     return `${randomFigures}`; 
 }
 
+/**
+ * This function will show the result of the choices, player vs pc.
+ * It should be working, with a for function, for the 5v5 game as well, will have to test.
+ */
+
 function solution (player, pc) {
     if (player == pc ) return "it's a tie!";
     if (player === 'rock') {
@@ -54,12 +59,12 @@ function fullSelection(event) {
 
 // card selection check
 function cardSelected(event) {
-    
+    let playerCard = event.target;
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
         const cardPC = randomCard();
         console.log(cardPC);
-        // solution(playerCard, cardPC);
+        solution(playerCard, cardPC);
     } else {
         console.log("select again");
     }
@@ -93,8 +98,9 @@ function playOriginalGame(event) {
     console.log(cards)
 
     // Event listener for chosen card by player
-    for (let card in cards) {
-    cards[card].addEventListener('click', cardSelected);
+    for (let i=0, i < cards.length, i++) {
+      cards[i].addEventListener('click', cardSelected);
+      console.log(cards[i])
 }
 }
 
