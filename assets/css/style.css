@@ -31,6 +31,11 @@ footer {
     margin-bottom: 15px;
 }
 
+.card img {
+    height: 250px;
+    width: 200px;
+}
+
 /* layout of the game-area section, trying to create enough space for the different game mods, so the
 size of the area won't change for different game types. */
 #game-area {

@@ -18,8 +18,18 @@ function randomCard () {
     return `${randomFigures}`; 
 }
 
-function solution (card) {
-    console.log(card);
+function solution (player, pc) {
+
+    console.log(pc);
+}
+
+/**
+ * 
+ * This function will wait for all 5 cards to be selected and will allow user to deselect cards too
+ * and will ask at the end if user is sure about choice. 
+ */
+function fullSelection(event) {
+
 }
 
 // card selection check
@@ -27,9 +37,9 @@ function cardSelected(event) {
     
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
-        console.log("you selected this card");
-        const card = randomCard();
-        solution(card)
+        const cardPC = randomCard();
+        console.log(cardPC);
+        // solution(playerCard, cardPC);
     } else {
         console.log("select again");
     }
@@ -50,7 +60,7 @@ function playOriginalGame(event) {
       <img src="assets/image/paper.png" alt="Paper">
     </button>
     <button class="card" id="scissors">
-      <img src="assets/image/scissors.png" alt="Scissors">
+      <img src="assets/image/scissor.png" alt="Scissors">
     </button>
     <button class="card" id="lizard">
       <img src="assets/image/lizard.png" alt="Lizard">
@@ -74,7 +84,31 @@ function playOriginalGame(event) {
  * and will be played one at a time, in order
  */
 function playFivevFiveGame(event) {
+    let game = document.getElementById('game-area')
+    game.classList.add('cards-bttm');
+    game.innerHTML = `
+    <button class="card" id="rock">
+      <img src="assets/image/rock.png" alt="Rock">
+    </button>
+    <button class="card" id="paper">
+      <img src="assets/image/paper.png" alt="Paper">
+    </button>
+    <button class="card" id="scissors">
+      <img src="assets/image/scissor.png" alt="Scissors">
+    </button>
+    <button class="card" id="lizard">
+      <img src="assets/image/lizard.png" alt="Lizard">
+    </button>
+    <button class="card" id="spock">
+      <img src="assets/image/spock.png" alt="Spock">
+    </button>`
 
+    let cards = document.getElementsByClassName('card');
+    console.log(cards)
+
+    // Event listener with function to wait for all 5 cards to be selected
+    for (let card in cards) {
+    cards[card].addEventListener('click', fullSelection);
 }
 
 /**
