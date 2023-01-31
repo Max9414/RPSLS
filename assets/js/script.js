@@ -15,6 +15,7 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
  */
 function randomCard () {
+    let cards = document.getElementsByClassName('card');
     let randomFigures = cards[Math.floor(Math.random() * cards.length)];
     return `${randomFigures}`; 
 }
@@ -95,12 +96,12 @@ function playOriginalGame(event) {
     </button>`
 
     let cards = document.getElementsByClassName('card');
-    console.log(cards)
+    console.log(cards);
 
     // Event listener for chosen card by player
-    for (let i=0, i < cards.length, i++) {
-      cards[i].addEventListener('click', cardSelected);
-      console.log(cards[i])
+    for (let j=0; j<cards.length; j++) {
+      cards[j].addEventListener('click', cardSelected);
+      console.log(cards[j]);
 }
 }
 
