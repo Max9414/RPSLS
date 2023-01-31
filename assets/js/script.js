@@ -20,8 +20,27 @@ function randomCard () {
 }
 
 function solution (player, pc) {
-
-    console.log(pc);
+    if (player == pc ) return "it's a tie!";
+    if (player === 'rock') {
+      if (pc === 'lizard' || pc === 'scissors') return "The player wins!";
+      else return "The pc wins!"
+    }
+    if (player === 'lizard') {
+      if (pc === 'spock' || pc === 'paper') return "The player wins!";
+      else return "The pc wins!"
+    }
+    if (player === 'spock') {
+      if (pc === 'scissors' || pc === 'rock') return "The player wins!";
+      else return "The pc wins!"
+    }
+    if (player === 'scissors') {
+      if (pc === 'paper' || pc === 'lizard') return "The player wins!";
+      else return "The pc wins!"
+    }
+    if (player === 'paper') {
+      if (pc === 'rock' || pc === 'spock') return "The player wins!";
+      else return "The pc wins!"
+    }
 }
 
 /**
