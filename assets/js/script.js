@@ -109,6 +109,16 @@ function fullSelection(event) {
       if (confirmed) {
         let fiveRandom = fiveRandomGenerated();
         console.log(fiveRandom);
+        for (let i=0; i<fiveRandom.length; i++ ) {
+          let sol = solution(selectedCards[i], fiveRandom[i]);
+          if (sol === "The player wins!") {
+          console.log(sol);
+          document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
+        } else if (sol === "The pc wins!" ) {
+          console.log(sol);
+          document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
+        } else {}
+       }
       } else {
         selectedCards = [] ;
         document.getElementById('rock').src = "assets/image/rock.png";
