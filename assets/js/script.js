@@ -42,6 +42,49 @@ function fiveRandomGenerated () {
   return randomCards;
 }
 
+function cardsCreation(game) {
+  let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+  let numbers = [0, 1, 2, 3, 4];
+  let game = document.getElementById('')
+  let randomNumber = [];
+  let randomCards = [];
+  for (let i = 0; i<3; i++) {
+    let randomIndex = Math.floor(Math.random()* numbers.length);
+    randomNumber.push(numbers[randomIndex]);
+    numbers.splice(randomIndex, 1);
+  }
+  for (let j = 0; j<3; j++) {
+    randomCards.push(cards[randomNumber[j]]);
+    if (randomCards[i] === 'rock') {
+      game.innerHTML+= `
+      <button class="card">
+      <img src="assets/image/rock.png" alt="rock"  id="rock">
+      </button>`
+    } else if (randomCards[i] === 'paper') {
+        game.innerHTML+= `
+        <button class="card">
+        <img src="assets/image/paper.png" alt="paper"  id="paper">
+        </button>`
+    }     else if (randomCards[i] === 'scissors') {
+            game.innerHTML+= `
+            <button class="card">
+            <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
+            </button>`
+  }         else if (randomCards[i] === 'lizard') {
+              game.innerHTML+= `
+              <button class="card">
+              <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
+              </button>`
+} else {
+    game.innerHTML+= `
+    <button class="card">
+    <img src="assets/image/spock.png" alt="spock"  id="spock">
+    </button>`
+  }
+  return game;
+}
+}
+
 /**
  * This function will show the result of the choices, player vs pc.
  * It should be working, with a for function, for the 5v5 game as well, will have to test.
@@ -164,6 +207,7 @@ function cardSelected(event) {
     }
 }
 
+
 /**
  * This function will create the whole HTML necessary for the first game to work
  * The game in question is the normal one, user can select the card normally and play the game
@@ -240,8 +284,7 @@ function playFivevFiveGame(event) {
 function PlayRandomGame(event) {
      let game = document.getElementById('game-area');
      game.classList.add('card-bttm');
-     game.innerHTML = ``;
-     cardsCreation();
+     game.innerHTML = cardsCreation(game);
      let cards = document.getElementsByClassName('card');
      for (let i=0; i<cards.length; i++) {
       cards[i].addEventListener('click', cardSelected);
