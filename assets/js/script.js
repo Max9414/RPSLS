@@ -121,6 +121,12 @@ function fullSelection(event) {
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
         } else {}
        }
+        selectedCards = [];
+        document.getElementById('rock').src = "assets/image/rock.png";
+        document.getElementById('paper').src = "assets/image/paper.png";
+        document.getElementById('scissors').src = "assets/image/scissors.png";
+        document.getElementById('lizard').src = "assets/image/lizard.png";
+        document.getElementById('spock').src = "assets/image/spock.png";
       } else {
         selectedCards = [] ;
         document.getElementById('rock').src = "assets/image/rock.png";
