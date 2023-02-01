@@ -11,6 +11,8 @@ window.onload = (event) => {
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
   };
 
+  let selectedCards= [];
+
 /**
  * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
  */
@@ -56,6 +58,25 @@ function solution (player, pc) {
 function fullSelection(event) {
     let playerCard = event.target.id;
     console.log(playerCard);
+    let index = selectedCards.indexOf(playerCard);
+    if (index === -1) {
+      selectedCards.push(playerCard);
+      if (playerCard === 'rock') {
+        document.getElementById('rock').innerHTML = `<img src="assets/image/brock.png" alt="rock"  id="rock">`
+      } else if (playerCard === 'paper') {
+        document.getElementById('paper').innerHTML = `<img src="assets/image/bpaper.png" alt="paper"  id="paper">`
+      } else if (playerCard === 'scissors') {
+        document.getElementById('scissors').innerHTML = `<img src="assets/image/bscissors.png" alt="scissors"  id="scissors">`
+        else if (playerCard === 'lizard') {
+          document.getElementById('lizard').innerHTML = `<img src="assets/image/blizard.png" alt="lizard"  id="lizard">`
+      } else {
+        document.getElementById('spock').innerHTML = `<img src="assets/image/bspock.png" alt="spock"  id="spock">`
+      }
+    } else { 
+      selectedCards.splice(index, 1);
+    }
+    console.log(selectedCards);
+}
 }
 
 // card selection check
@@ -140,7 +161,7 @@ function playFivevFiveGame(event) {
     </button>`
 
     let cards = document.getElementsByClassName('card');
-    console.log(cards)
+    console.log(cards);
 
     // Event listener with function to wait for all 5 cards to be selected
     for (let j=0; j<cards.length; j++) {
