@@ -74,6 +74,17 @@ function fullSelection(event) {
       }
     } else { 
       selectedCards.splice(index, 1);
+      if (playerCard === 'rock') {
+        document.getElementById('rock').src = "assets/image/rock.png";
+      } else if (playerCard === 'paper') {
+        document.getElementById('paper').src = "assets/image/paper.png";
+      } else if (playerCard === 'scissors') {
+        document.getElementById('scissors').src = "assets/image/scissors.png";
+      }  else if (playerCard === 'lizard') {
+          document.getElementById('lizard').src = "assets/image/lizard.png";
+      } else {
+        document.getElementById('spock').src = "assets/image/spock.png";
+      }
     }
     console.log(selectedCards);
 }
