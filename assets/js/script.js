@@ -14,12 +14,17 @@ window.onload = (event) => {
   let selectedCards= [];
 
 /**
- * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
+ * This function will be used to generate a random pick for the pc for OriginalGame 
  */
 function randomCard () {
     let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     return cards[Math.floor(Math.random() * cards.length)];
 }
+
+/** 
+ * This function randomly generates 5 numbers from 0 to 4 using math functions and a for loop.
+ * It then generates an array of cards based on the random numbers generated.
+ */
 
 function fiveRandomGenerated () {
   let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
@@ -216,7 +221,7 @@ function playFivevFiveGame(event) {
     </button>
     <button class="card" >
       <img src="assets/image/spock.png" alt="spock" id="spock">
-    </button>`
+    </button>`;
 
     let cards = document.getElementsByClassName('card');
     console.log(cards);
@@ -233,6 +238,13 @@ function playFivevFiveGame(event) {
  * for the pc, then they will have to play like the normal versione, one card at a time
  */
 function PlayRandomGame(event) {
-     
+     let game = document.getElementById('game-area');
+     game.classList.add('card-bttm');
+     game.innerHTML = ``;
+     cardsCreation();
+     let cards = document.getElementsByClassName('card');
+     for (let i=0; i<cards.length; i++) {
+      cards[i].addEventListener('click', cardSelected);
+     }
 }
 
