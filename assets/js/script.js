@@ -17,8 +17,20 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
  */
 function randomCard () {
-    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     return cards[Math.floor(Math.random() * cards.length)];
+}
+
+function fiveRandomGenerated () {
+  let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+  let numbers = [0, 1, 2, 3, 4];
+  let randomNumber = [];
+  for (let i = 0; i<numbers.length; i++) {
+    let randomIndex = Math.floor(Math.random()* numbers.length);
+    randomNumber.push(numbers[randomIndex]);
+    numbers.splice(randomIndex);
+  }
+  return randomNumber;
 }
 
 /**
@@ -55,8 +67,6 @@ function solution (player, pc) {
  * This function will wait for all 5 cards to be selected and will allow user to deselect cards too
  * and will ask at the end if user is sure about choice. 
  */
-// As this function is getting really long and complicated, I decided to split the last part and delegate other functions
-// so that everything is clearer.
 function fullSelection(event) {
     let playerCard = event.target.id;
     console.log(playerCard);
@@ -93,7 +103,8 @@ function fullSelection(event) {
     if (selectedCards.length == 5) {
       let confirmed = confirm ("Are you sure you want to select these cards?");
       if (confirmed) {
-
+        let fiveRandom = fiveRandomGenerated();
+        console.log(fiveRandom);
       } else {
         selectedCards = [] ;
         document.getElementById('rock').src = "assets/image/rock.png";
