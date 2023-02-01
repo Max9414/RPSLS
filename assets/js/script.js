@@ -9,6 +9,7 @@ window.onload = (event) => {
     // Event listeners for the 3 different games
     document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
+    document.getElementById('game-btn3').addEventListener('click', playRandomGame);
   };
 
   let selectedCards= [];
@@ -42,10 +43,13 @@ function fiveRandomGenerated () {
   return randomCards;
 }
 
+/**
+ * This function builds the html adding innerHTML depending on the randomly generated cards.
+ */
+
 function cardsCreation(game) {
   let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   let numbers = [0, 1, 2, 3, 4];
-  let game = document.getElementById('')
   let randomNumber = [];
   let randomCards = [];
   for (let i = 0; i<3; i++) {
@@ -55,22 +59,22 @@ function cardsCreation(game) {
   }
   for (let j = 0; j<3; j++) {
     randomCards.push(cards[randomNumber[j]]);
-    if (randomCards[i] === 'rock') {
+    if (randomCards[j] === 'rock') {
       game.innerHTML+= `
       <button class="card">
       <img src="assets/image/rock.png" alt="rock"  id="rock">
       </button>`
-    } else if (randomCards[i] === 'paper') {
+    } else if (randomCards[j] === 'paper') {
         game.innerHTML+= `
         <button class="card">
         <img src="assets/image/paper.png" alt="paper"  id="paper">
         </button>`
-    }     else if (randomCards[i] === 'scissors') {
+    }     else if (randomCards[j] === 'scissors') {
             game.innerHTML+= `
             <button class="card">
             <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
             </button>`
-  }         else if (randomCards[i] === 'lizard') {
+  }         else if (randomCards[j] === 'lizard') {
               game.innerHTML+= `
               <button class="card">
               <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
@@ -81,8 +85,8 @@ function cardsCreation(game) {
     <img src="assets/image/spock.png" alt="spock"  id="spock">
     </button>`
   }
-  return game;
 }
+  return game;
 }
 
 /**
@@ -281,10 +285,11 @@ function playFivevFiveGame(event) {
  * The game in question will pick 3 random cards for the user and 3 random cards
  * for the pc, then they will have to play like the normal versione, one card at a time
  */
-function PlayRandomGame(event) {
+function playRandomGame(event) {
      let game = document.getElementById('game-area');
+     game.innerHTML = ``;
      game.classList.add('card-bttm');
-     game.innerHTML = cardsCreation(game);
+     game += cardsCreation(game);
      let cards = document.getElementsByClassName('card');
      for (let i=0; i<cards.length; i++) {
       cards[i].addEventListener('click', cardSelected);
