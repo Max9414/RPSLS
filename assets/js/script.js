@@ -15,8 +15,8 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for OriginalGame and RandomGame
  */
 function randomCard () {
-    let cards = document.getElementsByClassName('card');
-    let randomFigures = cards[Math.floor(Math.random() * cards.length)];
+    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+    let randomFigures = cards[Math.floor(Math.random() * cards.length*10)];
     return `${randomFigures}`; 
 }
 
@@ -61,14 +61,17 @@ function fullSelection(event) {
 // card selection check
 function cardSelected(event) {
     let playerCard = event.target;
+    console.log(playerCard);
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
-        const cardPC = randomCard();
+        let cardPC = randomCard();
         console.log(cardPC);
         let sol = solution(playerCard, cardPC);
         if (sol === "The player wins!") {
+          console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
         } else {
+          console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
         }
     } else {
@@ -85,19 +88,19 @@ function playOriginalGame(event) {
     game.classList.add('cards-bttm');
     game.innerHTML = `
     <button class="card" id="rock">
-      <img src="assets/image/rock.png" alt="Rock">
+      <img src="assets/image/rock.png" alt="rock">
     </button>
     <button class="card" id="paper">
-      <img src="assets/image/paper.png" alt="Paper">
+      <img src="assets/image/paper.png" alt="paper">
     </button>
     <button class="card" id="scissors">
-      <img src="assets/image/scissor.png" alt="Scissors">
+      <img src="assets/image/scissor.png" alt="scissors">
     </button>
     <button class="card" id="lizard">
-      <img src="assets/image/lizard.png" alt="Lizard">
+      <img src="assets/image/lizard.png" alt="lizard">
     </button>
     <button class="card" id="spock">
-      <img src="assets/image/spock.png" alt="Spock">
+      <img src="assets/image/spock.png" alt="spock">
     </button>`
 
     let cards = document.getElementsByClassName('card');
