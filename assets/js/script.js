@@ -54,7 +54,8 @@ function solution (player, pc) {
  * and will ask at the end if user is sure about choice. 
  */
 function fullSelection(event) {
-
+    let playerCard = event.target.id;
+    console.log(playerCard);
 }
 
 // card selection check
@@ -122,28 +123,28 @@ function playFivevFiveGame(event) {
     let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
-    <button class="card" id="rock">
-      <img src="assets/image/rock.png" alt="Rock">
+    <button class="card">
+      <img src="assets/image/rock.png" alt="rock"  id="rock">
     </button>
-    <button class="card" id="paper">
-      <img src="assets/image/paper.png" alt="Paper">
+    <button class="card" >
+      <img src="assets/image/paper.png" alt="paper" id="paper">
     </button>
-    <button class="card" id="scissors">
-      <img src="assets/image/scissor.png" alt="Scissors">
+    <button class="card" >
+      <img src="assets/image/scissor.png" alt="scissors" id="scissors">
     </button>
-    <button class="card" id="lizard">
-      <img src="assets/image/lizard.png" alt="Lizard">
+    <button class="card" >
+      <img src="assets/image/lizard.png" alt="lizard" id="lizard">
     </button>
-    <button class="card" id="spock">
-      <img src="assets/image/spock.png" alt="Spock">
+    <button class="card" >
+      <img src="assets/image/spock.png" alt="spock" id="spock">
     </button>`
 
     let cards = document.getElementsByClassName('card');
     console.log(cards)
 
     // Event listener with function to wait for all 5 cards to be selected
-    for (let card in cards) {
-    cards[card].addEventListener('click', fullSelection);
+    for (let j=0; j<cards.length; j++) {
+    cards[j].addEventListener('click', fullSelection);
 }
 }
 
