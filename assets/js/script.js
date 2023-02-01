@@ -127,7 +127,7 @@ function playOriginalGame(event) {
       <img src="assets/image/paper.png" alt="paper" id="paper">
     </button>
     <button class="card" >
-      <img src="assets/image/scissor.png" alt="scissors" id="scissors">
+      <img src="assets/image/scissors.png" alt="scissors" id="scissors">
     </button>
     <button class="card" >
       <img src="assets/image/lizard.png" alt="lizard" id="lizard">
@@ -162,7 +162,7 @@ function playFivevFiveGame(event) {
       <img src="assets/image/paper.png" alt="paper" id="paper">
     </button>
     <button class="card" >
-      <img src="assets/image/scissor.png" alt="scissors" id="scissors">
+      <img src="assets/image/scissors.png" alt="scissors" id="scissors">
     </button>
     <button class="card" >
       <img src="assets/image/lizard.png" alt="lizard" id="lizard">
