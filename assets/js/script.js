@@ -86,20 +86,20 @@ function playOriginalGame(event) {
     let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
-    <button class="card" id="rock">
-      <img src="assets/image/rock.png" alt="rock">
+    <button class="card">
+      <img src="assets/image/rock.png" alt="rock"  id="rock">
     </button>
-    <button class="card" id="paper">
-      <img src="assets/image/paper.png" alt="paper">
+    <button class="card" >
+      <img src="assets/image/paper.png" alt="paper" id="paper">
     </button>
-    <button class="card" id="scissors">
-      <img src="assets/image/scissor.png" alt="scissors">
+    <button class="card" >
+      <img src="assets/image/scissor.png" alt="scissors" id="scissors">
     </button>
-    <button class="card" id="lizard">
-      <img src="assets/image/lizard.png" alt="lizard">
+    <button class="card" >
+      <img src="assets/image/lizard.png" alt="lizard" id="lizard">
     </button>
-    <button class="card" id="spock">
-      <img src="assets/image/spock.png" alt="spock">
+    <button class="card" >
+      <img src="assets/image/spock.png" alt="spock" id="spock">
     </button>`
 
     let cards = document.getElementsByClassName('card');
