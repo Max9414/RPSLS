@@ -87,6 +87,10 @@ function fullSelection(event) {
       }
     }
     console.log(selectedCards);
+    console.log(selectedCards.length);
+    if (selectedCards.length == 5) {
+      console.log('selection done');
+    } else {};
 }
 
 
