@@ -16,8 +16,7 @@ window.onload = (event) => {
  */
 function randomCard () {
     let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock']
-    let randomFigures = cards[Math.floor(Math.random() * cards.length*10)];
-    return `${randomFigures}`; 
+    return cards[Math.floor(Math.random() * cards.length)];
 }
 
 /**
@@ -60,7 +59,7 @@ function fullSelection(event) {
 
 // card selection check
 function cardSelected(event) {
-    let playerCard = event.target;
+    let playerCard = event.target.id;
     console.log(playerCard);
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
