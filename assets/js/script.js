@@ -25,12 +25,16 @@ function fiveRandomGenerated () {
   let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   let numbers = [0, 1, 2, 3, 4];
   let randomNumber = [];
-  for (let i = 0; i<numbers.length; i++) {
+  let randomCards = [];
+  for (let i = 0; i<5; i++) {
     let randomIndex = Math.floor(Math.random()* numbers.length);
     randomNumber.push(numbers[randomIndex]);
-    numbers.splice(randomIndex);
+    numbers.splice(randomIndex, 1);
   }
-  return randomNumber;
+  for (let j = 0; j<5; j++) {
+    randomCards.push(cards[randomNumber[j]]);
+  }
+  return randomCards;
 }
 
 /**
