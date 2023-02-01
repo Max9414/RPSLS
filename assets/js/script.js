@@ -62,22 +62,22 @@ function fullSelection(event) {
     if (index === -1) {
       selectedCards.push(playerCard);
       if (playerCard === 'rock') {
-        document.getElementById('rock').innerHTML = `<img src="assets/image/brock.png" alt="rock"  id="rock">`
+        document.getElementById('rock').src = "assets/image/brock.png";
       } else if (playerCard === 'paper') {
-        document.getElementById('paper').innerHTML = `<img src="assets/image/bpaper.png" alt="paper"  id="paper">`
+        document.getElementById('paper').src = "assets/image/bpaper.png";
       } else if (playerCard === 'scissors') {
-        document.getElementById('scissors').innerHTML = `<img src="assets/image/bscissors.png" alt="scissors"  id="scissors">`
-        else if (playerCard === 'lizard') {
-          document.getElementById('lizard').innerHTML = `<img src="assets/image/blizard.png" alt="lizard"  id="lizard">`
+        document.getElementById('scissors').src = "assets/image/bscissors.png";
+      }  else if (playerCard === 'lizard') {
+          document.getElementById('lizard').src = "assets/image/blizard.png";
       } else {
-        document.getElementById('spock').innerHTML = `<img src="assets/image/bspock.png" alt="spock"  id="spock">`
+        document.getElementById('spock').src = "assets/image/bspock.png";
       }
     } else { 
       selectedCards.splice(index, 1);
     }
     console.log(selectedCards);
 }
-}
+
 
 // card selection check
 function cardSelected(event) {
