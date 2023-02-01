@@ -55,6 +55,8 @@ function solution (player, pc) {
  * This function will wait for all 5 cards to be selected and will allow user to deselect cards too
  * and will ask at the end if user is sure about choice. 
  */
+// As this function is getting really long and complicated, I decided to split the last part and delegate other functions
+// so that everything is clearer.
 function fullSelection(event) {
     let playerCard = event.target.id;
     console.log(playerCard);
@@ -89,10 +91,19 @@ function fullSelection(event) {
     console.log(selectedCards);
     console.log(selectedCards.length);
     if (selectedCards.length == 5) {
-      console.log('selection done');
-    } else {};
-}
+      let confirmed = confirm ("Are you sure you want to select these cards?");
+      if (confirmed) {
 
+      } else {
+        selectedCards = [] ;
+        document.getElementById('rock').src = "assets/image/rock.png";
+        document.getElementById('paper').src = "assets/image/paper.png";
+        document.getElementById('scissors').src = "assets/image/scissors.png";
+        document.getElementById('lizard').src = "assets/image/lizard.png";
+        document.getElementById('spock').src = "assets/image/spock.png";
+      }
+    } else {}
+  }
 
 // card selection check
 function cardSelected(event) {
@@ -102,7 +113,6 @@ function cardSelected(event) {
     if (confirmed) {
         let cardPC = randomCard();
         console.log(cardPC);
-        // experiment with setTimeout
         let sol = solution(playerCard, cardPC);
         if (sol === "The player wins!") {
           console.log(sol);
