@@ -70,6 +70,8 @@ function solution (player, pc) {
  * 
  * This function will wait for all 5 cards to be selected and will allow user to deselect cards too
  * and will ask at the end if user is sure about choice. 
+ * It will then check the winner for all 5 selections, deciding the winner with a for loop in order of
+ * selection.
  */
 function fullSelection(event) {
     let playerCard = event.target.id;
