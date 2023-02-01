@@ -52,6 +52,10 @@ button {
     margin: 0 20px;
 }
 
+.card {
+    padding: 0;
+}
+
 /* Layout for the original game and possibly the others too. Might be subject to changes */
 .cards-bttm {
     text-align:center;

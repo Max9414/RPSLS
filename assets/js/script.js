@@ -65,14 +65,15 @@ function cardSelected(event) {
     if (confirmed) {
         let cardPC = randomCard();
         console.log(cardPC);
+        // experiment with setTimeout
         let sol = solution(playerCard, cardPC);
         if (sol === "The player wins!") {
           console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
-        } else {
+        } else if (sol === "The pc wins!" ) {
           console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
-        }
+        } else {}
     } else {
         console.log("select again");
     }
