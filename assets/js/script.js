@@ -65,7 +65,12 @@ function cardSelected(event) {
     if (confirmed) {
         const cardPC = randomCard();
         console.log(cardPC);
-        solution(playerCard, cardPC);
+        let sol = solution(playerCard, cardPC);
+        if (sol === "The player wins!") {
+          document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
+        } else {
+          document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
+        }
     } else {
         console.log("select again");
     }
