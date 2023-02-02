@@ -32,8 +32,8 @@ footer {
 }
 
 .card img {
-    height: 250px;
-    width: 200px;
+    height: 18vh;
+    width: 15vw;
 }
 
 /* layout of the game-area section, trying to create enough space for the different game mods, so the
@@ -71,4 +71,14 @@ button {
     margin-top: 3vh;
     display: flex;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1200px) {
+    header, footer, button {
+        font-size: 1.5rem;
+    }
+    .card img {
+        height: 15vh;
+        width: 20vw;
+    }
 }
