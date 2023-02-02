@@ -293,9 +293,9 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
   </button>`
 }
 if (gameType === 'original') {
-  setTimeout(playOriginalGame, 3000);
+  setTimeout(playOriginalGame, 2500);
 } else {
-  setTimeout(playRandomGame, 3000);
+  setTimeout(playRandomGame, 2500);
 }
   
 }
@@ -345,7 +345,7 @@ function winLoseTieFive(player, pc, solution) {
       </div>`;
     }
   }
-  setTimeout(playFivevFiveGame, 3000);
+  setTimeout(playFivevFiveGame, 5000);
 }
 
 /**
@@ -480,6 +480,9 @@ function homeGenerator(event) {
     </div>
     <div class="img-div">
       <img src="assets/image/rockpaperscissorslizardspock_newthumb.png" alt="Rock Paper Scissors Lizard Spock game pic" >
+    </div>
+    <div>
+      <h2>Choose a game above</h2>
     </div>`;
     document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
