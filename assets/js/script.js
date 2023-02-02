@@ -189,7 +189,16 @@ function fullSelection(event) {
         document.getElementById('spock').src = "assets/image/spock.png";
       }
     } else {}
+
   }
+
+/**
+ * This function will reset the selection of the 5 cards to 0 if pressed 
+ * */
+function resetChoice() {
+  let selectedCards = [];
+  return selectedCards;
+}
 
 // card selection check
 function cardSelected(event) {
@@ -264,6 +273,7 @@ function playFivevFiveGame(event) {
     game.innerHTML = `
     <div>
       <button id="home-btn">Home</button>
+      <button id="reset-btn">Reset</button>
     </div>
     <div>
       <button class="card">
@@ -283,6 +293,8 @@ function playFivevFiveGame(event) {
       </button>
     </div>`;
     document.getElementById('home-btn').addEventListener('click', homeGenerator);
+    document.getElementById('reset-btn').addEventListener('click', resetChoice);
+    
 
     let cards = document.getElementsByClassName('card');
     console.log(cards);
