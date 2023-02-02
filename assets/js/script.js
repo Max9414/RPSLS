@@ -238,8 +238,8 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
       game.innerHTML = `
       <h1>It's a tie!!</h1>`
     }
-    game.innerHTML += `<div id="win-lose-div" class="showcase-cards"></div>`
-    winner = document.getElementById('win-lose-div');
+    game.innerHTML += `<div class="showcase-cards"></div>`
+    winner = document.getElementsByClassName('showcase-cards');
     if (playerCard === 'rock') {
       winner.innerHTML+= `
       <button class="card">
@@ -307,6 +307,13 @@ if (gameType === 'original') {
  * at the same time.
  */
 
+function winLoseTieFive(player, pc, solution) {
+
+  for (let i=0; i<5; i++) {
+    let game = document.getElementById('game-area')
+    game.classList.add('showcase-section');
+  }
+}
 
 /**
  * This function will create the whole HTML necessary for the first game to work
