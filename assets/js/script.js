@@ -14,18 +14,6 @@ window.onload = (event) => {
 
   let selectedCards= [];
 
-// Gonna try to move the popup window to the center of the screen.
-
-let windowHeight = window.innerHeight;
-let windowWidth = window.innerWidth;
-let popupHeight = window.innerHeight / 6;
-let popupWidth = window.innerWidth /6;
-
-let popupTop = (windowHeight - popupHeight) / 2;
-let popupLeft = (windowWidth - popupWidth) / 2;
-
-let popupWindow = window.open("", "", `height=${popupHeight}, width=${popupWidth}, top=${popupTop}, left=${popupLeft}`);
-
 /**
  * This function will be used to generate a random pick for the pc for all games 
  */
