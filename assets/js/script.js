@@ -192,13 +192,7 @@ function fullSelection(event) {
     } else {}
   }
 
-/**
- * This function will reset the selection of the 5 cards to 0 if pressed 
- * */
-function resetChoice() {
-  let selectedCards = [];
-  return selectedCards;
-}
+
 
 // card selection check
 function cardSelected(event) {
@@ -358,6 +352,7 @@ function playFivevFiveGame(event) {
     let game = document.getElementById('game-area');
     selectedCards = [];
     gameType = 'five';
+    game.classList.remove('showcase-section');
     game.classList.add('cards-bttm');
     game.innerHTML = `
     <div>
@@ -407,9 +402,10 @@ function playRandomGame(event) {
      <div>
       <button id="home-btn">Home</button>
       <button id="shuffle-btn">Shuffle</button>
-    </div>
-    <div id="game-area-div">
-    </div>`;
+     </div>
+     <div id="game-area-div">
+     </div>`;
+     game.classList.remove('showcase-section');
      game.classList.add('cards-bttm');
      let gameDiv = document.getElementById('game-area-div');
      gameDiv += cardsCreation(gameDiv);
@@ -428,6 +424,7 @@ function playRandomGame(event) {
 
 function homeGenerator(event) {
     let game = document.getElementById('game-area');
+    gameType='';
     game.innerHTML = `
     <div class="buttons">
       <button id="game-btn1">Original</button>
