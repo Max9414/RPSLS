@@ -14,6 +14,7 @@ window.onload = (event) => {
 
   
   let selectedCards= [];
+  let gameType = '';
 
 /**
  * This function will be used to generate a random pick for the pc for all games 
@@ -205,21 +206,22 @@ function cardSelected(event) {
     console.log(playerCard);
     let pcCard = randomCard();
     let sol = solution(playerCard, pcCard);
+    let gameType = 'Original'
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
         console.log(pcCard);
-
         if (sol === "The player wins!") {
           console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
+          winnerLoserTiePage(playerCard, pcCard, sol);
         } else if (sol === "The pc wins!" ) {
           console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
-        } else {}
+          winnerLoserTiePage(playerCard, pcCard, sol);
+        } else {winnerLoserTiePage(playerCard, pcCard, sol);}
     } else {
         console.log("select again");
     }
-    winnerLoserTiePage(playerCard, pcCard, sol);
 }
 
 /**
@@ -304,6 +306,7 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
  */
 function playOriginalGame(event) {
     let game = document.getElementById('game-area');
+    gameType = 'original';
     game.classList.remove('showcase-section');
     game.classList.add('cards-bttm');
     game.innerHTML = `
