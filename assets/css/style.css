@@ -81,6 +81,11 @@ button {
     align-items: center;
 }
 
+.smaller img {
+    height: 8vh;
+    width: 5vw;
+}
+
 /* Simple result showcase for pc and human player score */
 
 .game-result {
@@ -100,6 +105,10 @@ button {
     .img-div img {
         max-height: 40vh;
         max-width: 70vw;
+    }
+    .smaller img {
+        height: 6vh;
+        width: 10vw;
     }
 }
 
