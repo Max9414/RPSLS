@@ -178,6 +178,7 @@ function fullSelection(event) {
           finalSolution.push('n');
         } else {}
        }
+        winLoseTieFive(selectedCards, fiveRandom, finalSolution);
         selectedCards = [];
         document.getElementById('rock').src = "assets/image/rock.png";
         document.getElementById('paper').src = "assets/image/paper.png";
@@ -301,6 +302,10 @@ if (gameType === 'original') {
   
 }
 
+/**
+ * This function will work in a really similar way to winnerLoserTiePage, showing all 5 results 
+ * at the same time.
+ */
 
 
 /**
