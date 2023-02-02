@@ -295,7 +295,14 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
   <img src="assets/image/spock.png" alt="spock"  id="spock">
   </button>`
 }
+if (gameType === 'original') {
   setTimeout(playOriginalGame, 3000);
+} else if (gameType === 'five') {
+  setTimeout(playFivevFiveGame, 3000);
+} else {
+  setTimeout(playRandomGame, 3000);
+}
+  
 }
 
 
