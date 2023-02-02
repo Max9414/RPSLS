@@ -211,14 +211,33 @@ function cardSelected(event) {
         if (sol === "The player wins!") {
           console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
+          winnerPage(playerCard, cardPC);
         } else if (sol === "The pc wins!" ) {
           console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
+          loserPage(playerCard, cardPC);
         } else {}
     } else {
         console.log("select again");
     }
 }
+
+/**
+ * This function will transform the game-area section into a showcase of the cards
+ * played by both the pc and the user and will show on the top "You win!"
+ */
+function winnerPage() {
+  let game = document.getElementById('game-area')
+    game.classList.add('cards-bttm');
+    game.innerHTML = `
+    `
+}
+
+
+/**
+ * This function will transform the game-area section into a showcase of the cards
+ * played by both the pc and the user and will show on the top "You lose!"
+ */
 
 
 /**
