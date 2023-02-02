@@ -228,10 +228,10 @@ function cardSelected(event) {
  */
 function winnerPage(playerCard, pcCard) {
   let game = document.getElementById('game-area')
-    game.classList.add('cards-bttm');
+    game.classList.add('showcase-section');
     game.innerHTML = `
     <h1>You win!!</h1>
-    <div id="winner-div" class="showcase"></div>`
+    <div id="winner-div" class="showcase-cards"></div>`
     winner = document.getElementById('winner-div');
     if (playerCard === 'rock') {
       winner.innerHTML+= `

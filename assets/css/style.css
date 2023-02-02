@@ -66,6 +66,20 @@ button {
     justify-content: space-between;
 }
 
+/* Layout for the winner-loser showcase and for the div/divs */
+.showcase-section {
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.showcase-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Simple result showcase for pc and human player score */
 
 .game-result {
