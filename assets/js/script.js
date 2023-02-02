@@ -18,7 +18,8 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for all games 
  */
 function randomCard () {
-    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    // let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    let cards = document.getElementsByClassName('card').id;
     return cards[Math.floor(Math.random() * cards.length)];
 }
 
@@ -61,28 +62,28 @@ function cardsCreation(game) {
     randomCards.push(cards[randomNumber[j]]);
     if (randomCards[j] === 'rock') {
       game.innerHTML+= `
-      <button class="card">
-      <img src="assets/image/rock.png" alt="rock"  id="rock">
+      <button >
+      <img src="assets/image/rock.png" class="card" alt="rock"  id="rock">
       </button>`
     } else if (randomCards[j] === 'paper') {
         game.innerHTML+= `
-        <button class="card">
-        <img src="assets/image/paper.png" alt="paper"  id="paper">
+        <button >
+        <img src="assets/image/paper.png" class="card" alt="paper"  id="paper">
         </button>`
     }     else if (randomCards[j] === 'scissors') {
             game.innerHTML+= `
-            <button class="card">
-            <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
+            <button >
+            <img src="assets/image/scissors.png" class="card" alt="scissors"  id="scissors">
             </button>`
   }         else if (randomCards[j] === 'lizard') {
               game.innerHTML+= `
-              <button class="card">
-              <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
+              <button >
+              <img src="assets/image/lizard.png" class="card" alt="lizard"  id="lizard">
               </button>`
 } else {
     game.innerHTML+= `
-    <button class="card">
-    <img src="assets/image/spock.png" alt="spock"  id="spock">
+    <button >
+    <img src="assets/image/spock.png" class="card" alt="spock"  id="spock">
     </button>`
   }
 }
@@ -220,20 +221,20 @@ function playOriginalGame(event) {
     let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
-    <button class="card">
-      <img src="assets/image/rock.png" alt="rock"  id="rock">
+    <button >
+      <img src="assets/image/rock.png" class="card" alt="rock"  id="rock">
     </button>
-    <button class="card" >
-      <img src="assets/image/paper.png" alt="paper" id="paper">
+    <button  >
+      <img src="assets/image/paper.png" class="card" alt="paper" id="paper">
     </button>
-    <button class="card" >
-      <img src="assets/image/scissors.png" alt="scissors" id="scissors">
+    <button  >
+      <img src="assets/image/scissors.png" class="card" alt="scissors" id="scissors">
     </button>
-    <button class="card" >
-      <img src="assets/image/lizard.png" alt="lizard" id="lizard">
+    <button  >
+      <img src="assets/image/lizard.png" class="card" alt="lizard" id="lizard">
     </button>
-    <button class="card" >
-      <img src="assets/image/spock.png" alt="spock" id="spock">
+    <button  >
+      <img src="assets/image/spock.png" class="card" alt="spock" id="spock">
     </button>`
 
     let cards = document.getElementsByClassName('card');
@@ -255,20 +256,20 @@ function playFivevFiveGame(event) {
     let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
-    <button class="card">
-      <img src="assets/image/rock.png" alt="rock"  id="rock">
+    <button >
+      <img src="assets/image/rock.png" class="card" alt="rock"  id="rock">
     </button>
-    <button class="card" >
-      <img src="assets/image/paper.png" alt="paper" id="paper">
+    <button  >
+      <img src="assets/image/paper.png" class="card" alt="paper" id="paper">
     </button>
-    <button class="card" >
-      <img src="assets/image/scissors.png" alt="scissors" id="scissors">
+    <button  >
+      <img src="assets/image/scissors.png" class="card" alt="scissors" id="scissors">
     </button>
-    <button class="card" >
-      <img src="assets/image/lizard.png" alt="lizard" id="lizard">
+    <button  >
+      <img src="assets/image/lizard.png" class="card" alt="lizard" id="lizard">
     </button>
-    <button class="card" >
-      <img src="assets/image/spock.png" alt="spock" id="spock">
+    <button  >
+      <img src="assets/image/spock.png" class="card" alt="spock" id="spock">
     </button>`;
 
     let cards = document.getElementsByClassName('card');
