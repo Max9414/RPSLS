@@ -308,10 +308,43 @@ if (gameType === 'original') {
  */
 
 function winLoseTieFive(player, pc, solution) {
-
+  let game = document.getElementById('game-area')
+  game.classList.add('showcase-section');
   for (let i=0; i<5; i++) {
-    let game = document.getElementById('game-area')
-    game.classList.add('showcase-section');
+    if (solution[i] === 'v') {
+      game.innerHTML += `
+      <div class="showcase-cards">
+        <button class="card">
+        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
+        </button>
+        <h2>You win!!</h2>
+        <button class="card">
+        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
+        </button>
+      </div>`;
+    } else if (solution[i] === 'n') {
+      game.innerHTML += `
+      <div class="showcase-cards">
+        <button class="card">
+        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
+        </button>
+        <h2>You lose!!</h2>
+        <button class="card">
+        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
+        </button>
+      </div>`;
+    } else {
+      game.innerHTML += `
+      <div class="showcase-cards">
+        <button class="card">
+        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
+        </button>
+        <h2>It's a tie!!</h2>
+        <button class="card">
+        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
+        </button>
+      </div>`;
+    }
   }
 }
 
