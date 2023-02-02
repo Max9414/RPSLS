@@ -350,6 +350,7 @@ function playOriginalGame(event) {
 function playFivevFiveGame(event) {
     let game = document.getElementById('game-area');
     selectedCards = [];
+    gameType = 'five';
     game.classList.add('cards-bttm');
     game.innerHTML = `
     <div>
@@ -394,6 +395,7 @@ function playFivevFiveGame(event) {
  */
 function playRandomGame(event) {
      let game = document.getElementById('game-area');
+     gameType = 'random';
      game.innerHTML = `
      <div>
       <button id="home-btn">Home</button>
