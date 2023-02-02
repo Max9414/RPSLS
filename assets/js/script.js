@@ -293,6 +293,7 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
   <img src="assets/image/spock.png" alt="spock"  id="spock">
   </button>`
 }
+  setTimeout(playOriginalGame, 3000);
 }
 
 
@@ -302,7 +303,8 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
  * The game in question is the normal one, user can select the card normally and play the game
  */
 function playOriginalGame(event) {
-    let game = document.getElementById('game-area')
+    let game = document.getElementById('game-area');
+    game.classList.remove('showcase-section');
     game.classList.add('cards-bttm');
     game.innerHTML = `
     <div>
