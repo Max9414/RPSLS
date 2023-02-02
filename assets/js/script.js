@@ -203,36 +203,44 @@ function resetChoice() {
 function cardSelected(event) {
     let playerCard = event.target.id;
     console.log(playerCard);
+    let pcCard = randomCard();
+    let sol = solution(playerCard, pcCard);
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
-        let pcCard = randomCard();
         console.log(pcCard);
-        let sol = solution(playerCard, pcCard);
+
         if (sol === "The player wins!") {
           console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
-          winnerPage(playerCard, pcCard);
         } else if (sol === "The pc wins!" ) {
           console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
-          loserPage(playerCard, pcCard);
         } else {}
     } else {
         console.log("select again");
     }
+    winnerLoserTiePage(playerCard, pcCard, sol);
 }
 
 /**
  * This function will transform the game-area section into a showcase of the cards
- * played by both the pc and the user and will show on the top "You win!"
+ * played by both the pc and the user and will show on the top you win/lose/it's a tie"
  */
-function winnerPage(playerCard, pcCard) {
+function winnerLoserTiePage(playerCard, pcCard, sol) {
   let game = document.getElementById('game-area')
     game.classList.add('showcase-section');
-    game.innerHTML = `
-    <h1>You win!!</h1>
-    <div id="winner-div" class="showcase-cards"></div>`
-    winner = document.getElementById('winner-div');
+    if (sol === 'The player wins!') {
+      game.innerHTML = `
+      <h1>You win!!</h1>`
+    } else if (sol === 'The pc wins!') {
+        game.innerHTML = `
+        <h1>You lose!!</h1>`
+    } else {
+      game.innerHTML = `
+      <h1>It's a tie!!</h1>`
+    }
+    game.innerHTML += `<div id="win-lose-div" class="showcase-cards"></div>`
+    winner = document.getElementById('win-lose-div');
     if (playerCard === 'rock') {
       winner.innerHTML+= `
       <button class="card">
@@ -259,13 +267,34 @@ function winnerPage(playerCard, pcCard) {
     <img src="assets/image/spock.png" alt="spock"  id="spock">
     </button>`
   }
+  if (pcCard === 'rock') {
+    winner.innerHTML+= `
+    <button class="card">
+    <img src="assets/image/rock.png" alt="rock"  id="rock">
+    </button>`
+  } else if (pcCard === 'paper') {
+      winner.innerHTML+= `
+      <button class="card">
+      <img src="assets/image/paper.png" alt="paper"  id="paper">
+      </button>`
+  }     else if (pcCard === 'scissors') {
+          winner.innerHTML+= `
+          <button class="card">
+          <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
+          </button>`
+}         else if (pcCard === 'lizard') {
+            winner.innerHTML+= `
+            <button class="card">
+            <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
+            </button>`
+} else {
+  winner.innerHTML+= `
+  <button class="card">
+  <img src="assets/image/spock.png" alt="spock"  id="spock">
+  </button>`
+}
 }
 
-
-/**
- * This function will transform the game-area section into a showcase of the cards
- * played by both the pc and the user and will show on the top "You lose!"
- */
 
 
 /**
