@@ -205,17 +205,17 @@ function cardSelected(event) {
     console.log(playerCard);
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
-        let cardPC = randomCard();
-        console.log(cardPC);
-        let sol = solution(playerCard, cardPC);
+        let pcCard = randomCard();
+        console.log(pcCard);
+        let sol = solution(playerCard, pcCard);
         if (sol === "The player wins!") {
           console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
-          winnerPage(playerCard, cardPC);
+          winnerPage(playerCard, pcCard);
         } else if (sol === "The pc wins!" ) {
           console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
-          loserPage(playerCard, cardPC);
+          loserPage(playerCard, pcCard);
         } else {}
     } else {
         console.log("select again");
@@ -226,7 +226,7 @@ function cardSelected(event) {
  * This function will transform the game-area section into a showcase of the cards
  * played by both the pc and the user and will show on the top "You win!"
  */
-function winnerPage() {
+function winnerPage(playerCard, pcCard) {
   let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
