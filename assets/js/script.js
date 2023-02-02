@@ -262,21 +262,27 @@ function playFivevFiveGame(event) {
     let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
-    <button class="card">
-      <img src="assets/image/rock.png" alt="rock"  id="rock">
-    </button>
-    <button class="card" >
-      <img src="assets/image/paper.png" alt="paper" id="paper">
-    </button>
-    <button class="card" >
-      <img src="assets/image/scissors.png" alt="scissors" id="scissors">
-    </button>
-    <button class="card" >
-      <img src="assets/image/lizard.png" alt="lizard" id="lizard">
-    </button>
-    <button class="card" >
-      <img src="assets/image/spock.png" alt="spock" id="spock">
-    </button>`;
+    <div>
+      <button id="home-btn">Home</button>
+    </div>
+    <div>
+      <button class="card">
+        <img src="assets/image/rock.png" alt="rock"  id="rock">
+      </button>
+      <button class="card" >
+        <img src="assets/image/paper.png" alt="paper" id="paper">
+      </button>
+      <button class="card" >
+        <img src="assets/image/scissors.png" alt="scissors" id="scissors">
+      </button>
+      <button class="card" >
+        <img src="assets/image/lizard.png" alt="lizard" id="lizard">
+      </button>
+      <button class="card" >
+        <img src="assets/image/spock.png" alt="spock" id="spock">
+      </button>
+    </div>`;
+    document.getElementById('home-btn').addEventListener('click', homeGenerator);
 
     let cards = document.getElementsByClassName('card');
     console.log(cards);
@@ -294,7 +300,10 @@ function playFivevFiveGame(event) {
  */
 function playRandomGame(event) {
      let game = document.getElementById('game-area');
-     game.innerHTML = ``;
+     game.innerHTML = `
+     <div>
+      <button id="home-btn">Home</button>
+    </div>`;
      game.classList.add('cards-bttm');
      game += cardsCreation(game);
      let cards = document.getElementsByClassName('card');
