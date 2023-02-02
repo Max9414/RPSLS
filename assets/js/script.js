@@ -230,7 +230,35 @@ function winnerPage(playerCard, pcCard) {
   let game = document.getElementById('game-area')
     game.classList.add('cards-bttm');
     game.innerHTML = `
-    `
+    <h1>You win!!</h1>
+    <div id="winner-div" class="showcase"></div>`
+    winner = document.getElementById('winner-div');
+    if (playerCard === 'rock') {
+      winner.innerHTML+= `
+      <button class="card">
+      <img src="assets/image/rock.png" alt="rock"  id="rock">
+      </button>`
+    } else if (playerCard === 'paper') {
+        winner.innerHTML+= `
+        <button class="card">
+        <img src="assets/image/paper.png" alt="paper"  id="paper">
+        </button>`
+    }     else if (playerCard === 'scissors') {
+            winner.innerHTML+= `
+            <button class="card">
+            <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
+            </button>`
+  }         else if (playerCard === 'lizard') {
+              winner.innerHTML+= `
+              <button class="card">
+              <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
+              </button>`
+} else {
+    winner.innerHTML+= `
+    <button class="card">
+    <img src="assets/image/spock.png" alt="spock"  id="spock">
+    </button>`
+  }
 }
 
 
