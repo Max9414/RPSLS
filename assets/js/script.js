@@ -189,7 +189,6 @@ function fullSelection(event) {
         document.getElementById('spock').src = "assets/image/spock.png";
       }
     } else {}
-
   }
 
 /**
@@ -268,7 +267,8 @@ function playOriginalGame(event) {
  * and will be played one at a time, in order
  */
 function playFivevFiveGame(event) {
-    let game = document.getElementById('game-area')
+    let game = document.getElementById('game-area');
+    selectedCards = [];
     game.classList.add('cards-bttm');
     game.innerHTML = `
     <div>
@@ -293,7 +293,8 @@ function playFivevFiveGame(event) {
       </button>
     </div>`;
     document.getElementById('home-btn').addEventListener('click', homeGenerator);
-    document.getElementById('reset-btn').addEventListener('click', resetChoice);
+    document.getElementById('reset-btn').addEventListener('click', playFivevFiveGame);
+   
     
 
     let cards = document.getElementsByClassName('card');
@@ -315,6 +316,7 @@ function playRandomGame(event) {
      game.innerHTML = `
      <div>
       <button id="home-btn">Home</button>
+      <button id="shuffle-btn">Shuffle</button>
     </div>
     <div id="game-area-div">
     </div>`;
@@ -326,6 +328,7 @@ function playRandomGame(event) {
       cards[i].addEventListener('click', cardSelected);
      }
      document.getElementById('home-btn').addEventListener('click', homeGenerator);
+     document.getElementById('shuffle-btn').addEventListener('click', playRandomGame);
 }
 
 /**
