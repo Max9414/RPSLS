@@ -12,6 +12,7 @@ window.onload = (event) => {
     document.getElementById('game-btn3').addEventListener('click', playRandomGame);
   };
 
+  
   let selectedCards= [];
 
 /**
@@ -240,6 +241,7 @@ function playOriginalGame(event) {
         <img src="assets/image/spock.png" alt="spock" id="spock">
       </button>
     </div>`
+    document.getElementById('home-btn').addEventListener('click', homeGenerator);
 
     let cards = document.getElementsByClassName('card');
     console.log(cards);
@@ -299,5 +301,26 @@ function playRandomGame(event) {
      for (let i=0; i<cards.length; i++) {
       cards[i].addEventListener('click', cardSelected);
      }
+}
+
+/**
+ * This function will recreate the original HTML file when pressed, allowing player
+ * to choose a different game, but without deleting the score
+ */
+
+function homeGenerator(event) {
+    let game = document.getElementById('game-area');
+    game.innerHTML = `
+    <div class="buttons">
+      <button id="game-btn1">Original</button>
+      <button id="game-btn2">All vs All</button>
+      <button id="game-btn3">3 Random</button>
+    </div>
+    <div class="img-div">
+      <img src="assets/image/rockpaperscissorslizardspock_newthumb.png" alt="Rock Paper Scissors Lizard Spock game pic" >
+    </div>`;
+    document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
+    document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
+    document.getElementById('game-btn3').addEventListener('click', playRandomGame);
 }
 
