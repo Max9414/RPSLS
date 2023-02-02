@@ -309,6 +309,7 @@ if (gameType === 'original') {
 
 function winLoseTieFive(player, pc, solution) {
   let game = document.getElementById('game-area')
+  game = ``;
   game.classList.add('showcase-section');
   for (let i=0; i<5; i++) {
     if (solution[i] === 'v') {
