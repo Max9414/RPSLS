@@ -309,12 +309,12 @@ if (gameType === 'original') {
 
 function winLoseTieFive(player, pc, solution) {
   let game = document.getElementById('game-area')
-  game = ``;
+  game.innerHTML = ``;
   game.classList.add('showcase-section');
   for (let i=0; i<5; i++) {
     if (solution[i] === 'v') {
       game.innerHTML += `
-      <div class="showcase-cards">
+      <div class="showcase-cards smaller">
         <button class="card">
         <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
         </button>
@@ -325,7 +325,7 @@ function winLoseTieFive(player, pc, solution) {
       </div>`;
     } else if (solution[i] === 'n') {
       game.innerHTML += `
-      <div class="showcase-cards">
+      <div class="showcase-cards smaller">
         <button class="card">
         <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
         </button>
@@ -336,7 +336,7 @@ function winLoseTieFive(player, pc, solution) {
       </div>`;
     } else {
       game.innerHTML += `
-      <div class="showcase-cards">
+      <div class="showcase-cards smaller">
         <button class="card">
         <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
         </button>
