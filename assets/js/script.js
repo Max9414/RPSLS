@@ -163,6 +163,7 @@ function fullSelection(event) {
     if (selectedCards.length == 5) {
       let confirmed = confirm ("Are you sure you want to select these cards?");
       if (confirmed) {
+        let finalSolution = [];
         let fiveRandom = fiveRandomGenerated();
         console.log(fiveRandom);
         for (let i=0; i<fiveRandom.length; i++ ) {
@@ -170,9 +171,11 @@ function fullSelection(event) {
           if (sol === "The player wins!") {
           console.log(sol);
           document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
+          finalSolution.push('v');
         } else if (sol === "The pc wins!" ) {
           console.log(sol);
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
+          finalSolution.push('n');
         } else {}
        }
         selectedCards = [];
@@ -200,7 +203,6 @@ function cardSelected(event) {
     console.log(playerCard);
     let pcCard = randomCard();
     let sol = solution(playerCard, pcCard);
-    let gameType = 'Original'
     let confirmed = confirm ("Are you sure you want to select this card?");
     if (confirmed) {
         console.log(pcCard);
