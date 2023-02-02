@@ -303,13 +303,17 @@ function playRandomGame(event) {
      game.innerHTML = `
      <div>
       <button id="home-btn">Home</button>
+    </div>
+    <div id="game-area-div">
     </div>`;
      game.classList.add('cards-bttm');
-     game += cardsCreation(game);
+     let gameDiv = document.getElementById('game-area-div');
+     gameDiv += cardsCreation(gameDiv);
      let cards = document.getElementsByClassName('card');
      for (let i=0; i<cards.length; i++) {
       cards[i].addEventListener('click', cardSelected);
      }
+     document.getElementById('home-btn').addEventListener('click', homeGenerator);
 }
 
 /**
