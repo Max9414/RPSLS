@@ -40,9 +40,10 @@ footer {
 /* layout of the game-area section, trying to create enough space for the different game mods, so the
 size of the area won't change for different game types. */
 #game-area {
-    width: 100%;
+    width: 90%;
     height: 65vh;
     padding: 20px 20px;
+    margin: auto;
     background-color: rgb(156, 156, 173);
 }
 
