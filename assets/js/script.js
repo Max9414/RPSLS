@@ -11,6 +11,8 @@ const SIGNS = {
   spock: 'spock'
 }
 
+let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
 window.onload = (event) => {
     console.log("page is fully loaded");
     // Event listeners for the 3 different games and the games explanation
@@ -30,7 +32,6 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for all games 
  */
 function randomCard () {
-    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     return cards[Math.floor(Math.random() * cards.length)];
 }
 
@@ -40,7 +41,6 @@ function randomCard () {
  */
 
 function fiveRandomGenerated () {
-  let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   let numbers = [0, 1, 2, 3, 4];
   let randomNumber = [];
   let randomCards = [];
@@ -60,7 +60,6 @@ function fiveRandomGenerated () {
  */
 
 function cardsCreation(game) {
-  let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   let numbers = [0, 1, 2, 3, 4];
   let randomNumber = [];
   let randomCards = [];
@@ -94,27 +93,6 @@ function solution (player, pc) {
       paper: ['rock', 'spock'],
     }
     return winCondition[player].includes(pc) ? "The player wins!" : "The pc wins!";
-
-    // if (player === 'rock') {
-    //   if (pc === 'lizard' || pc === 'scissors') return "The player wins!";
-    //   else return "The pc wins!"
-    // }
-    // if (player === 'lizard') {
-    //   if (pc === 'spock' || pc === 'paper') return "The player wins!";
-    //   else return "The pc wins!"
-    // }
-    // if (player === 'spock') {
-    //   if (pc === 'scissors' || pc === 'rock') return "The player wins!";
-    //   else return "The pc wins!"
-    // }
-    // if (player === 'scissors') {
-    //   if (pc === 'paper' || pc === 'lizard') return "The player wins!";
-    //   else return "The pc wins!"
-    // }
-    // if (player === 'paper') {
-    //   if (pc === 'rock' || pc === 'spock') return "The player wins!";
-    //   else return "The pc wins!"
-    // }
 }
 
 /**
