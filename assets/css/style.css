@@ -149,3 +149,25 @@ button {
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width: 420px) {
+    header, footer, button {
+        font-size: 0.9rem;
+    }
+
+    header {
+        min-height: 100px;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px;
+        margin: 0 8px;
+    }
+
+    .explanation {
+        font-size: 0.7rem;
+    }
+}

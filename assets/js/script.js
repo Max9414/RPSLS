@@ -250,58 +250,65 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
     }
     game.innerHTML += `<div id="win-lose-div" class="showcase-cards"></div>`
     winner = document.getElementById('win-lose-div');
-    if (playerCard === 'rock') {
-      winner.innerHTML+= `
+    winner.innerHTML += `
       <button class="card">
-      <img src="assets/image/rock.png" alt="rock"  id="rock">
-      </button>`
-    } else if (playerCard === 'paper') {
-        winner.innerHTML+= `
-        <button class="card">
-        <img src="assets/image/paper.png" alt="paper"  id="paper">
-        </button>`
-    }     else if (playerCard === 'scissors') {
-            winner.innerHTML+= `
-            <button class="card">
-            <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
-            </button>`
-  }         else if (playerCard === 'lizard') {
-              winner.innerHTML+= `
-              <button class="card">
-              <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
-              </button>`
-} else {
-    winner.innerHTML+= `
-    <button class="card">
-    <img src="assets/image/spock.png" alt="spock"  id="spock">
-    </button>`
-  }
-  if (pcCard === 'rock') {
-    winner.innerHTML+= `
-    <button class="card">
-    <img src="assets/image/rock.png" alt="rock"  id="rock">
-    </button>`
-  } else if (pcCard === 'paper') {
-      winner.innerHTML+= `
+        <img src="assets/image/${playerCard}.png" alt="${playerCard}"  id="${playerCard}">
+      </button>
       <button class="card">
-      <img src="assets/image/paper.png" alt="paper"  id="paper">
+        <img src="assets/image/${pcCard}.png" alt="${pcCard}"  id="${pcCard}">
       </button>`
-  }     else if (pcCard === 'scissors') {
-          winner.innerHTML+= `
-          <button class="card">
-          <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
-          </button>`
-}         else if (pcCard === 'lizard') {
-            winner.innerHTML+= `
-            <button class="card">
-            <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
-            </button>`
-} else {
-  winner.innerHTML+= `
-  <button class="card">
-  <img src="assets/image/spock.png" alt="spock"  id="spock">
-  </button>`
-}
+//     if (playerCard === 'rock') {
+//       winner.innerHTML+= `
+//       <button class="card">
+//       <img src="assets/image/rock.png" alt="rock"  id="rock">
+//       </button>`
+//     } else if (playerCard === 'paper') {
+//         winner.innerHTML+= `
+//         <button class="card">
+//         <img src="assets/image/paper.png" alt="paper"  id="paper">
+//         </button>`
+//     }     else if (playerCard === 'scissors') {
+//             winner.innerHTML+= `
+//             <button class="card">
+//             <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
+//             </button>`
+//   }         else if (playerCard === 'lizard') {
+//               winner.innerHTML+= `
+//               <button class="card">
+//               <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
+//               </button>`
+// } else {
+//     winner.innerHTML+= `
+//     <button class="card">
+//     <img src="assets/image/spock.png" alt="spock"  id="spock">
+//     </button>`
+//   }
+//   if (pcCard === 'rock') {
+//     winner.innerHTML+= `
+//     <button class="card">
+//     <img src="assets/image/rock.png" alt="rock"  id="rock">
+//     </button>`
+//   } else if (pcCard === 'paper') {
+//       winner.innerHTML+= `
+//       <button class="card">
+//       <img src="assets/image/paper.png" alt="paper"  id="paper">
+//       </button>`
+//   }     else if (pcCard === 'scissors') {
+//           winner.innerHTML+= `
+//           <button class="card">
+//           <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
+//           </button>`
+// }         else if (pcCard === 'lizard') {
+//             winner.innerHTML+= `
+//             <button class="card">
+//             <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
+//             </button>`
+// } else {
+//   winner.innerHTML+= `
+//   <button class="card">
+//   <img src="assets/image/spock.png" alt="spock"  id="spock">
+//   </button>`
+// }
 if (gameType === 'original') {
   setTimeout(playOriginalGame, 2500);
 } else {
