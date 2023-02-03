@@ -30,7 +30,7 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for all games 
  */
 function randomCard () {
-    let cards = [signs.rock, 'paper', 'scissors', 'lizard', 'spock'];
+    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     return cards[Math.floor(Math.random() * cards.length)];
 }
 
