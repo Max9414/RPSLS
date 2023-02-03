@@ -257,58 +257,6 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
       <button class="card">
         <img src="assets/image/${pcCard}.png" alt="${pcCard}"  id="${pcCard}">
       </button>`
-//     if (playerCard === 'rock') {
-//       winner.innerHTML+= `
-//       <button class="card">
-//       <img src="assets/image/rock.png" alt="rock"  id="rock">
-//       </button>`
-//     } else if (playerCard === 'paper') {
-//         winner.innerHTML+= `
-//         <button class="card">
-//         <img src="assets/image/paper.png" alt="paper"  id="paper">
-//         </button>`
-//     }     else if (playerCard === 'scissors') {
-//             winner.innerHTML+= `
-//             <button class="card">
-//             <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
-//             </button>`
-//   }         else if (playerCard === 'lizard') {
-//               winner.innerHTML+= `
-//               <button class="card">
-//               <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
-//               </button>`
-// } else {
-//     winner.innerHTML+= `
-//     <button class="card">
-//     <img src="assets/image/spock.png" alt="spock"  id="spock">
-//     </button>`
-//   }
-//   if (pcCard === 'rock') {
-//     winner.innerHTML+= `
-//     <button class="card">
-//     <img src="assets/image/rock.png" alt="rock"  id="rock">
-//     </button>`
-//   } else if (pcCard === 'paper') {
-//       winner.innerHTML+= `
-//       <button class="card">
-//       <img src="assets/image/paper.png" alt="paper"  id="paper">
-//       </button>`
-//   }     else if (pcCard === 'scissors') {
-//           winner.innerHTML+= `
-//           <button class="card">
-//           <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
-//           </button>`
-// }         else if (pcCard === 'lizard') {
-//             winner.innerHTML+= `
-//             <button class="card">
-//             <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
-//             </button>`
-// } else {
-//   winner.innerHTML+= `
-//   <button class="card">
-//   <img src="assets/image/spock.png" alt="spock"  id="spock">
-//   </button>`
-// }
 if (gameType === 'original') {
   setTimeout(playOriginalGame, 2500);
 } else {
@@ -327,42 +275,28 @@ function winLoseTieFive(player, pc, solution) {
   game.innerHTML = ``;
   game.classList.add('showcase-section');
   for (let i=0; i<5; i++) {
+    let beginning = `
+      <div class="showcase-cards smaller">
+        <button class="card">
+        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
+        </button>`;
+    let end = `
+      <button class="card">
+        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
+        </button>
+      </div>`;
     if (solution[i] === 'v') {
-      game.innerHTML += `
-      <div class="showcase-cards smaller">
-        <button class="card">
-        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
-        </button>
-        <h2>You win!!</h2>
-        <button class="card">
-        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
-        </button>
-      </div>`;
+      game.innerHTML += beginning + `
+        <h2>You win!!</h2>` + end;
     } else if (solution[i] === 'n') {
-      game.innerHTML += `
-      <div class="showcase-cards smaller">
-        <button class="card">
-        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
-        </button>
-        <h2>You lose!!</h2>
-        <button class="card">
-        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
-        </button>
-      </div>`;
+      game.innerHTML += beginning + `
+        <h2>You lose!!</h2>` + end;
     } else {
-      game.innerHTML += `
-      <div class="showcase-cards smaller">
-        <button class="card">
-        <img src="assets/image/${player[i]}.png" alt="${player[i]}"  id="${player[i]}">
-        </button>
-        <h2>It's a tie!!</h2>
-        <button class="card">
-        <img src="assets/image/${pc[i]}.png" alt="${pc[i]}"  id="${pc[i]}">
-        </button>
-      </div>`;
+      game.innerHTML += beginning + `
+        <h2>It's a tie!!</h2>` + end;
     }
   }
-  setTimeout(playFivevFiveGame, 5000);
+  setTimeout(playFivevFiveGame, 20000);
 }
 
 /**
