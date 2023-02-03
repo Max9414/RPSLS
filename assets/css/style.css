@@ -33,7 +33,7 @@ footer {
 
 .card img {
     height: 18vh;
-    width: 15vw;
+    width: 12vw;
     padding: 3px;
 }
 
@@ -49,8 +49,8 @@ size of the area won't change for different game types. */
 
 button {
     font-size: 2rem;
-    padding: 20px;
-    margin: 0 20px;
+    padding: 10px;
+    margin: 0 15px;
 }
 
 .card {
