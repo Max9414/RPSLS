@@ -71,6 +71,16 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![5vs5 Game](assets/image/readmeimages/5vs5game.png)
 
+- __The results pages__
+
+  - This section shows the results
+  - For Random and Original, the page is shown for 2.5 seconds and shows if user won/lost/tied and the cards played
+  - For 5vs5 it shows all 5 cards in order of selection and won/lost/tied
+
+![Results Page](assets/image/readmeimages/resultpage.png)
+
+![Results Page](assets/image/readmeimages/5resultspage.png)
+
 - __The Footer__ 
 
   - The footer section has a counter for both player and PC that increases with every victory.
