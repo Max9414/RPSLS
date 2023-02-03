@@ -488,6 +488,7 @@ function homeGenerator(event) {
     document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
     document.getElementById('game-btn3').addEventListener('click', playRandomGame);
+    document.getElementById('games-info').addEventListener('click', gamesExplained);
 }
 
 function gamesExplained(event) {
