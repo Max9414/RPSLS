@@ -19,6 +19,7 @@ header {
     min-height: 200px;
     max-height: 20vh;
     height: 20%;
+    cursor: pointer;
 }
 
 footer {
@@ -122,6 +123,11 @@ button {
     header, footer, button {
         font-size: 1.5rem;
     }
+
+    .bigger {
+        font-size: 1rem;
+    }
+
     .card img {
         height: 15vh;
         width: 20vw;
@@ -141,6 +147,10 @@ button {
         font-size: 1rem;
     }
 
+    .bigger {
+        font-size: 0.8rem;
+    }
+
     header {
         min-height: 100px;
     }
@@ -152,13 +162,9 @@ button {
         padding: 10px;
         margin: 0 10px;
     }
-
-    .explanation {
-        font-size: 0.8rem;
-    }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 400px) {
     header, footer, button {
         font-size: 0.9rem;
     }
@@ -175,7 +181,7 @@ button {
         margin: 0 8px;
     }
 
-    .explanation {
+    .bigger {
         font-size: 0.7rem;
     }
 }
