@@ -54,6 +54,7 @@ button {
     font-size: 2rem;
     padding: 10px;
     margin: 0 15px;
+    cursor: pointer;
 }
 
 .card {
@@ -63,6 +64,7 @@ button {
 #games-info {
     color: blue;
     text-decoration: underline solid;
+    cursor: pointer;
 }
 
 /* Layout for the original game and possibly the others too. Might be subject to changes */
