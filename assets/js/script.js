@@ -286,7 +286,7 @@ function winLoseTieFive(player, pc, solution) {
         <h2>It's a tie!!</h2>` + end;
     }
   }
-  setTimeout(playFivevFiveGame, 20000);
+  setTimeout(playFivevFiveGame, 5000);
 }
 
 /**
