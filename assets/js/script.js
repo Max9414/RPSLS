@@ -6,7 +6,7 @@
 
 window.onload = (event) => {
     console.log("page is fully loaded");
-    // Event listeners for the 3 different games
+    // Event listeners for the 3 different games and the games explanation
     document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
     document.getElementById('game-btn3').addEventListener('click', playRandomGame);
