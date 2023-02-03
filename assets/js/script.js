@@ -86,26 +86,35 @@ function cardsCreation(game) {
 
 function solution (player, pc) {
     if (player == pc ) return "it's a tie!";
-    if (player === 'rock') {
-      if (pc === 'lizard' || pc === 'scissors') return "The player wins!";
-      else return "The pc wins!"
+    winCondition = {
+      rock: ['lizard', 'scissors'],
+      lizard: ['spock', 'paper'],
+      spock: ['scissors', 'rock'],
+      scissors: ['paper', 'lizard'],
+      paper: ['rock', 'spock'],
     }
-    if (player === 'lizard') {
-      if (pc === 'spock' || pc === 'paper') return "The player wins!";
-      else return "The pc wins!"
-    }
-    if (player === 'spock') {
-      if (pc === 'scissors' || pc === 'rock') return "The player wins!";
-      else return "The pc wins!"
-    }
-    if (player === 'scissors') {
-      if (pc === 'paper' || pc === 'lizard') return "The player wins!";
-      else return "The pc wins!"
-    }
-    if (player === 'paper') {
-      if (pc === 'rock' || pc === 'spock') return "The player wins!";
-      else return "The pc wins!"
-    }
+    return winCondition[player].includes(pc) ? "The player wins!" : "The pc wins!";
+
+    // if (player === 'rock') {
+    //   if (pc === 'lizard' || pc === 'scissors') return "The player wins!";
+    //   else return "The pc wins!"
+    // }
+    // if (player === 'lizard') {
+    //   if (pc === 'spock' || pc === 'paper') return "The player wins!";
+    //   else return "The pc wins!"
+    // }
+    // if (player === 'spock') {
+    //   if (pc === 'scissors' || pc === 'rock') return "The player wins!";
+    //   else return "The pc wins!"
+    // }
+    // if (player === 'scissors') {
+    //   if (pc === 'paper' || pc === 'lizard') return "The player wins!";
+    //   else return "The pc wins!"
+    // }
+    // if (player === 'paper') {
+    //   if (pc === 'rock' || pc === 'spock') return "The player wins!";
+    //   else return "The pc wins!"
+    // }
 }
 
 /**
