@@ -80,7 +80,7 @@ function cardsCreation(game) {
 
 /**
  * This function will show the result of the choices, player vs pc.
- * It should be working, with a for function, for the 5v5 game as well, will have to test.
+ * It works, with a for function, for the 5v5 game as well.
  */
 
 function solution (player, pc) {
