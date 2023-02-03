@@ -3,6 +3,13 @@
 //     console.log('DOM fully loaded and parsed');
     
 // });
+const SIGNS = {
+  paper: 'paper',
+  rock: 'rock',
+  scissors: 'scissors',
+  lizard: 'lizard',
+  spock: 'spock'
+}
 
 window.onload = (event) => {
     console.log("page is fully loaded");
@@ -13,6 +20,8 @@ window.onload = (event) => {
     document.getElementById('games-info').addEventListener('click', gamesExplained);
   };
 
+
+
   
   let selectedCards= [];
   let gameType = '';
@@ -21,7 +30,7 @@ window.onload = (event) => {
  * This function will be used to generate a random pick for the pc for all games 
  */
 function randomCard () {
-    let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    let cards = [signs.rock, 'paper', 'scissors', 'lizard', 'spock'];
     return cards[Math.floor(Math.random() * cards.length)];
 }
 
