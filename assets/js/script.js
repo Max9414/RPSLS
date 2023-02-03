@@ -477,7 +477,7 @@ function homeGenerator(event) {
     game.innerHTML = `
     <div class="buttons">
       <button id="game-btn1">Original</button>
-      <button id="game-btn2">All vs All</button>
+      <button id="game-btn2">5 vs 5</button>
       <button id="game-btn3">3 Random</button>
     </div>
     <div class="img-div">
