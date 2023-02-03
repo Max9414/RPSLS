@@ -10,6 +10,7 @@ window.onload = (event) => {
     document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
     document.getElementById('game-btn3').addEventListener('click', playRandomGame);
+    document.getElementById('games-info').addEventListener('click', gamesExplained);
   };
 
   
@@ -482,10 +483,32 @@ function homeGenerator(event) {
       <img src="assets/image/rockpaperscissorslizardspock_newthumb.png" alt="Rock Paper Scissors Lizard Spock game pic" >
     </div>
     <div>
-      <h2>Choose a game above</h2>
+      <h2>Choose a game above: <span id="games-info">games info</span></h2>
     </div>`;
     document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
     document.getElementById('game-btn3').addEventListener('click', playRandomGame);
 }
 
+function gamesExplained(event) {
+  let game = document.getElementById('game-area');
+  game.innerHTML= `
+  <h1>Original</h1>
+  <div>
+    <p>In this game you will play the normal game, selecting 1 card and playing against the computer to see who won, both having all the 5 cards.</p>
+  </div>
+  <h1>5 vs 5</h1>
+  <div>
+    <p>In this game you will select all 5 cards, in the order preferred by you, and they will go against the randomly generated choices of the pc, following the selection order. Every victory will award you or the pc a point.</p>
+    <p>You will also have a reset button to reset completely your choice.</p>
+  </div>
+  <h1>Random</h1>
+  <div>
+    <p>In this game you will have 3 randomly generated cards to choose from and you will compete against the pc like in the first game, so choosing one card to play.</p>
+    <p>If you don't like the cards, you also have a shuffle button that you can use to change your 3 cards</p>
+  </div>
+  <div>
+    <button id="home-btn">Home</button>
+  </div>`
+  document.getElementById('home-btn').addEventListener('click', homeGenerator);
+}

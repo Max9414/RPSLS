@@ -57,6 +57,11 @@ button {
     padding: 0;
 }
 
+#games-info {
+    color: blue;
+    text-decoration: underline solid;
+}
+
 /* Layout for the original game and possibly the others too. Might be subject to changes */
 .cards-bttm {
     text-align:center;
