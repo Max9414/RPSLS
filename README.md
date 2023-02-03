@@ -91,6 +91,8 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
   - The header section is used to reset the score on the footer if player wants to reset the score.
 
+![Header](assets/image/readmeimages/header.png)
+
 - __Explanation section__
 
   - The Explanation section explains the various games to the user, so they can choose whatever they prefer.
