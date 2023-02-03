@@ -38,6 +38,10 @@ footer {
     font-size: 1.5rem;
 }
 
+.biggest {
+    font-size: 4rem;
+}
+
 .card img {
     height: 18vh;
     width: 12vw;

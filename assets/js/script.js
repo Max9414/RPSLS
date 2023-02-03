@@ -413,6 +413,10 @@ function gamesExplained(event) {
 }
 
 function resetPoints(event) {
+  let game = document.getElementById('game-area');
+  game.innerHTML = `
+  <h1 class="biggest">New Game!</h1>`;
   document.getElementById('player-score').innerHTML = 0;
   document.getElementById('computer-score').innerHTML = 0;
+  setTimeout(homeGenerator, 3000);
 }
