@@ -4,8 +4,8 @@
     
 // });
 const SIGNS = {
-  paper: 'paper',
   rock: 'rock',
+  paper: 'paper',
   scissors: 'scissors',
   lizard: 'lizard',
   spock: 'spock'
