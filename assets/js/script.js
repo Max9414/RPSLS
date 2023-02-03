@@ -473,6 +473,7 @@ function playRandomGame(event) {
 function homeGenerator(event) {
     let game = document.getElementById('game-area');
     gameType='';
+    game.classList.remove('explanation');
     game.innerHTML = `
     <div class="buttons">
       <button id="game-btn1">Original</button>
@@ -493,18 +494,19 @@ function homeGenerator(event) {
 
 function gamesExplained(event) {
   let game = document.getElementById('game-area');
+  game.classList.add('explanation');
   game.innerHTML= `
-  <h1>Original</h1>
   <div>
+    <h1>Original</h1>
     <p>In this game you will play the normal game, selecting 1 card and playing against the computer to see who won, both having all the 5 cards.</p>
   </div>
-  <h1>5 vs 5</h1>
   <div>
+    <h1>5 vs 5</h1>
     <p>In this game you will select all 5 cards, in the order preferred by you, and they will go against the randomly generated choices of the pc, following the selection order. Every victory will award you or the pc a point.</p>
     <p>You will also have a reset button to reset completely your choice.</p>
   </div>
-  <h1>Random</h1>
   <div>
+    <h1>Random</h1>
     <p>In this game you will have 3 randomly generated cards to choose from and you will compete against the pc like in the first game, so choosing one card to play.</p>
     <p>If you don't like the cards, you also have a shuffle button that you can use to change your 3 cards</p>
   </div>

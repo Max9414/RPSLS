@@ -99,6 +99,14 @@ button {
     justify-content: space-evenly;
 }
 
+/* Simple layout for the explanation page */
+
+.explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 @media screen and (max-width: 1200px) {
     header, footer, button {
         font-size: 1.5rem;
@@ -125,9 +133,16 @@ button {
     header {
         min-height: 100px;
     }
+    h2 {
+        font-size: 1rem;
+    }
 
     button {
         padding: 10px;
         margin: 0 10px;
+    }
+
+    .explanation {
+        font-size: 0.8rem;
     }
 }
