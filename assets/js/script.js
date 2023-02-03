@@ -15,6 +15,8 @@ window.onload = (event) => {
     document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
     document.getElementById('game-btn3').addEventListener('click', playRandomGame);
     document.getElementById('games-info').addEventListener('click', gamesExplained);
+    //Added listener to reset the score
+    document.getElementsByTagName('header')[0].addEventListener('click', resetPoints);
   };
 
 
@@ -400,8 +402,17 @@ function gamesExplained(event) {
     <p>In this game you will have 3 randomly generated cards to choose from and you will compete against the pc like in the first game, so choosing one card to play.</p>
     <p>If you don't like the cards, you also have a shuffle button that you can use to change your 3 cards</p>
   </div>
+  <div class="bigger">
+    <h2>New Game</h2>
+    <p>Press the Title to reset the score</p>
+  </div>
   <div>
     <button id="home-btn">Home</button>
   </div>`
   document.getElementById('home-btn').addEventListener('click', homeGenerator);
+}
+
+function resetPoints(event) {
+  document.getElementById('player-score').innerHTML = 0;
+  document.getElementById('computer-score').innerHTML = 0;
 }
