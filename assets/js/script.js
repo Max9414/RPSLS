@@ -71,32 +71,10 @@ function cardsCreation(game) {
   }
   for (let j = 0; j<3; j++) {
     randomCards.push(cards[randomNumber[j]]);
-    if (randomCards[j] === 'rock') {
-      game.innerHTML+= `
+    game.innerHTML+=`
       <button class="card">
-      <img src="assets/image/rock.png" alt="rock"  id="rock">
+      <img src="assets/image/${cards[randomNumber[j]]}.png" alt="${cards[randomNumber[j]]}"  id="${cards[randomNumber[j]]}">
       </button>`
-    } else if (randomCards[j] === 'paper') {
-        game.innerHTML+= `
-        <button class="card">
-        <img src="assets/image/paper.png" alt="paper"  id="paper">
-        </button>`
-    }     else if (randomCards[j] === 'scissors') {
-            game.innerHTML+= `
-            <button class="card">
-            <img src="assets/image/scissors.png" alt="scissors"  id="scissors">
-            </button>`
-  }         else if (randomCards[j] === 'lizard') {
-              game.innerHTML+= `
-              <button class="card">
-              <img src="assets/image/lizard.png" alt="lizard"  id="lizard">
-              </button>`
-} else {
-    game.innerHTML+= `
-    <button class="card">
-    <img src="assets/image/spock.png" alt="spock"  id="spock">
-    </button>`
-  }
 }
   return game;
 }
@@ -144,17 +122,6 @@ function fullSelection(event) {
     if (index === -1) {
       selectedCards.push(playerCard);
       document.getElementById(playerCard).src = "assets/image/b" + playerCard + ".png"
-      // if (playerCard === 'rock') {
-      //   document.getElementById('rock').src = "assets/image/brock.png";
-      // } else if (playerCard === 'paper') {
-      //   document.getElementById('paper').src = "assets/image/bpaper.png";
-      // } else if (playerCard === 'scissors') {
-      //   document.getElementById('scissors').src = "assets/image/bscissors.png";
-      // }  else if (playerCard === 'lizard') {
-      //     document.getElementById('lizard').src = "assets/image/blizard.png";
-      // } else {
-      //   document.getElementById('spock').src = "assets/image/bspock.png";
-      // }
     } else { 
       selectedCards.splice(index, 1);
       document.getElementById(playerCard).src = "assets/image/" + playerCard + ".png"
