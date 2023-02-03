@@ -143,17 +143,18 @@ function fullSelection(event) {
     let index = selectedCards.indexOf(playerCard);
     if (index === -1) {
       selectedCards.push(playerCard);
-      if (playerCard === 'rock') {
-        document.getElementById('rock').src = "assets/image/brock.png";
-      } else if (playerCard === 'paper') {
-        document.getElementById('paper').src = "assets/image/bpaper.png";
-      } else if (playerCard === 'scissors') {
-        document.getElementById('scissors').src = "assets/image/bscissors.png";
-      }  else if (playerCard === 'lizard') {
-          document.getElementById('lizard').src = "assets/image/blizard.png";
-      } else {
-        document.getElementById('spock').src = "assets/image/bspock.png";
-      }
+      document.getElementById(playerCard).src = "assets/image/b" + playerCard + ".png"
+      // if (playerCard === 'rock') {
+      //   document.getElementById('rock').src = "assets/image/brock.png";
+      // } else if (playerCard === 'paper') {
+      //   document.getElementById('paper').src = "assets/image/bpaper.png";
+      // } else if (playerCard === 'scissors') {
+      //   document.getElementById('scissors').src = "assets/image/bscissors.png";
+      // }  else if (playerCard === 'lizard') {
+      //     document.getElementById('lizard').src = "assets/image/blizard.png";
+      // } else {
+      //   document.getElementById('spock').src = "assets/image/bspock.png";
+      // }
     } else { 
       selectedCards.splice(index, 1);
       document.getElementById(playerCard).src = "assets/image/" + playerCard + ".png"
