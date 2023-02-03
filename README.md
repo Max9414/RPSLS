@@ -84,9 +84,12 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 - __The Footer__ 
 
   - The footer section has a counter for both player and PC that increases with every victory.
-  - As a choice, I didn't make it reset on different games, I might add later on a button to start a new game, maybe pressing the title.
 
 ![Footer](assets/image/readmeimages/footer.png)
+
+- __The Header__ 
+
+  - The header section is used to reset the score on the footer if player wants to reset the score.
 
 - __Explanation section__
 
@@ -97,7 +100,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ### Features Left to Implement
 
-- New game function.  
+- Nothing for now. 
 
 ## Testing 
 
