@@ -35,14 +35,14 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
   - As I focused mainly on the logic with javascript, the landing page is really simple, with a title, a subtitle, buttons to play and a pic to show briefly which card wins against which.
 
-![Landing Page](assets/image/readmeimages/mainpage.png)
+![Landing Page](assets/image/readmeimages/fullgame.png)
 
 - __Game Area section__
 
   - This section is the only section in the page that changes, mutating its HTML on every different button interaction
   - It has an easy grey colour background to help the user see clearly which one is the game section
 
-![Game Area](assets/image/readmeimages/maingame.png)
+![Game Area](assets/image/readmeimages/mainpage.png)
 
 - __Original game section__
 
@@ -50,7 +50,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
   - With every interaction with the card, a popup message will appear asking to confirm or cancel the choice.
   - The page will then change to show who won, update the score and show the played cards.
 
-![Original Game](assets/image/readmeimages/randomgame.png)
+![Original Game](assets/image/readmeimages/maingame.png)
 
 - __Random game section__
 
@@ -59,7 +59,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
   - The page will then change to show who won, update the score and show the played cards.
   - On shuffle, the function for the random game will be called again and it will give you 3 new cards.
 
-![Random Game](assets/image/readmeimages/5vs5game.png)
+![Random Game](assets/image/readmeimages/randomgame.png)
 
 - __5vs5 game section__
 
@@ -69,21 +69,21 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
   - The page will then change to show who won, update the score and show the played cards for all 5 choices in order of choice.
   - On reset, the function for the 5vs5 game will be called again and it will basically deselect all the cards for the user.
 
-![5vs5 Game](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
+![5vs5 Game](assets/image/readmeimages/5vs5game.png)
 
 - __The Footer__ 
 
   - The footer section has a counter for both player and PC that increases with every victory.
   - As a choice, I didn't make it reset on different games, I might add later on a button to start a new game, maybe pressing the title.
 
-![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
+![Footer](assets/image/readmeimages/footer.png)
 
 - __Explanation section__
 
   - The Explanation section explains the various games to the user, so they can choose whatever they prefer.
   - It presents at the end a "Home" button to go back to the main page.
 
-![Explanation section](https://github.com/lucyrush/readme-template/blob/master/media/love_running_gallery.png)
+![Explanation section](assets/image/readmeimages/gamesinfo.png)
 
 ### Features Left to Implement
 
