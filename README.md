@@ -1,10 +1,21 @@
+# Rock Paper Scissors Lizard Spock
+
+RPSLS is an easy game designed for any type of audience, especially for fans of the serie "The Bigbang Theory", as this version of the game became popular because of it. To make it a bit more exciting, the game presents 3 possible variations:
+- classic
+- 5vs5
+- random
+
+![Responsice Mockup](assets/image/readmeimages/AmIResponsive.png)
+
+# [Visit the game here](https://max9414.github.io/RPSLS/)
+
+
 # Table of Content
-1. [Rock Paper Scissors Lizard Spock](#rock-paper-scissors-lizard-spock)
-2. [Project Goals](#project-goals)
+1. [Project Goals](#project-goals)
    - [Site Owner Goals](#site-owner-goals)
    - [User Goals](#user-goals)
-3. [Features](#features)
-4. [Existing Features](#existing-features)
+2. [Features](#features)
+3. [Existing Features](#existing-features)
    - [Navigation Bar](#navigation-bar)
    - [The landing page](#the-landing-page)
    - [Game Area section](#game-area-section)
@@ -15,24 +26,15 @@
    - [The Footer](#the-footer)
    - [The Header](#the-header)
    - [Explanation section](#explanation-section)
-5. [Features Left to Implement](#features-left-to-implement)
-6. [Testing](#testing)
+4. [Features Left to Implement](#features-left-to-implement)
+5. [Testing](#testing)
    - [Validator Testing](#validator-testing)
-7. [Unfixed Bugs](#unfixed-bugs)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
-10. [Content](#content)
-11. [Media](#media)
+6. [Unfixed Bugs](#unfixed-bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Content](#content)
+10. [Media](#media)
 
-
-# Rock Paper Scissors Lizard Spock
-
-RPSLS is an easy game designed for any type of audience, especially for fans of the serie "The Bigbang Theory", as this version of the game became popular because of it. To make it a bit more exciting, the game presents 3 possible variations:
-- classic
-- 5vs5
-- random
-
-![Responsice Mockup](assets/image/readmeimages/mainpage.png)
 
 ## Project Goals
 
