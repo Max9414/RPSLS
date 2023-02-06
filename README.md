@@ -15,6 +15,7 @@ RPSLS is an easy game designed for any type of audience, especially for fans of 
 1. [Project Goals](#project-goals)
    - [Site Owner Goals](#site-owner-goals)
    - [User Goals](#user-goals)
+   - [Target Audience](#target-audience)
 2. [Features](#features)
 3. [Existing Features](#existing-features)
    - [Navigation Bar](#navigation-bar)
@@ -55,6 +56,11 @@ RPSLS aims to let people enjoy an easy game with different challenges, enjoy a q
 - See if they win or lose during the game
 - See score while playing the game and upon completion of the game
 - Easily reset the game
+
+### [Target Audience](#table-of-content)
+- The Bigbang Theory fans
+- Rock paper scissors fans searching for a more challenging version
+- Whoever needs a little brain restart
 
 ## [Features](#table-of-content) 
 
