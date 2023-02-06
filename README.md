@@ -1,3 +1,29 @@
+# Table of Content
+1. [Rock Paper Scissors Lizard Spock](#rock-paper-scissors-lizard-spock)
+2. [Project Goals](#project-goals)
+   - [Site Owner Goals](#site-owner-goals)
+   - [User Goals](#user-goals)
+3. [Features](#features)
+4. [Existing Features](#existing-features)
+   - [Navigation Bar](#navigation-bar)
+   - [The landing page](#the-landing-page)
+   - [Game Area section](#game-area-section)
+   - [Original game section](#original-game-section)
+   - [Random game section](#random-game-section)
+   - [5vs5 game section](#5vs5-game-section)
+   - [The results pages](#the-results-pages)
+   - [The Footer](#the-footer)
+   - [The Header](#the-header)
+   - [Explanation section](#explanation-section)
+5. [Features Left to Implement](#features-left-to-implement)
+6. [Testing](#testing)
+   - [Validator Testing](#validator-testing)
+7. [Unfixed Bugs](#unfixed-bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+10. [Content](#content)
+11. [Media](#media)
+
 
 # Rock Paper Scissors Lizard Spock
 
@@ -8,14 +34,32 @@ RPSLS is an easy game designed for any type of audience, especially for fans of 
 
 ![Responsice Mockup](assets/image/readmeimages/mainpage.png)
 
+## Project Goals
+
+RPSLS aims to let people enjoy an easy game with different challenges, enjoy a quick, fast paced and easy to understand game.
+
+### Site Owner Goals 
+- Test User luck
+- Provide different game options
+- Provide new game function to reset score
+- Provide entertainment
+- Show both user and pc scores
+
+### User Goals
+- Easily navigate through the game
+- Understand the rules of the game
+- Get cards upon starting the game
+- See if they win or lose during the game
+- See score while playing the game and upon completion of the game
+- Easily reset the game
+
 ## Features 
 
 Fun, challenges and explanations all within sight and reachable with an easy click!
 
 ### Existing Features
 
-- __Navigation Bar__
-
+#### Navigation Bar
   - Mutable navigation bar, changing on the different pages to bring the game experience to the next level!
   - On the main page you can access all the 3 different games with each specific button.
 
@@ -31,20 +75,20 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Nav Bar random](assets/image/readmeimages/navrandom.png)
 
-- __The landing page__
+- #### The landing page
 
   - As I focused mainly on the logic with javascript, the landing page is really simple, with a title, a subtitle, buttons to play and a pic to show briefly which card wins against which.
 
 ![Landing Page](assets/image/readmeimages/fullgame.png)
 
-- __Game Area section__
+- #### Game Area section
 
   - This section is the only section in the page that changes, mutating its HTML on every different button interaction
   - It has an easy grey colour background to help the user see clearly which one is the game section
 
 ![Game Area](assets/image/readmeimages/mainpage.png)
 
-- __Original game section__
+- #### Original game section
 
   - This section will allow the user to play the original game or bring them back to the homepage.
   - With every interaction with the card, a popup message will appear asking to confirm or cancel the choice.
@@ -52,7 +96,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Original Game](assets/image/readmeimages/maingame.png)
 
-- __Random game section__
+- #### Random game section
 
   - This section will allow the user to play the random game, bring them back to the homepage or reshuffle the cards.
   - With every interaction with the card, a popup message will appear asking to confirm or cancel the choice.
@@ -61,7 +105,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Random Game](assets/image/readmeimages/randomgame.png)
 
-- __5vs5 game section__
+- #### 5vs5 game section
 
   - This section will allow the user to play the 5vs5 game, bring them back to the homepage or reset the choice.
   - When all the 5 cards will be selected, a popup message will appear asking to confirm or cancel the choice.
@@ -71,7 +115,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![5vs5 Game](assets/image/readmeimages/5vs5game.png)
 
-- __The results pages__
+- #### The results pages
 
   - This section shows the results
   - For Random and Original, the page is shown for 2.5 seconds and shows if user won/lost/tied and the cards played
@@ -81,19 +125,19 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Results Page](assets/image/readmeimages/5resultspage.png)
 
-- __The Footer__ 
+- #### The Footer 
 
   - The footer section has a counter for both player and PC that increases with every victory.
 
 ![Footer](assets/image/readmeimages/footer.png)
 
-- __The Header__ 
+- #### The Header 
 
   - The header section is used to reset the score on the footer if player wants to reset the score.
 
 ![Header](assets/image/readmeimages/header.png)
 
-- __Explanation section__
+- #### Explanation section
 
   - The Explanation section explains the various games to the user, so they can choose whatever they prefer.
   - It presents at the end a "Home" button to go back to the main page.
