@@ -119,6 +119,17 @@ Many bugs have been found for small mistakes in the code but now, even if still 
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmax9414.github.io%2Fpaper-scissor-spock%2Findex.html)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmax9414.github.io%2Fpaper-scissor-spock%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- JSHint
+  - The only feedback from JSHint is about metrics. The one I'm most concerned about is the cyclomatic complexity of one of my functions, that, for my understanding, means that maintaning and understanding one of my functions could be really complex.
+  I tried to make them as easy as I could possibly do for my current skills.
+  - Metrics
+  - There are 15 functions in this file.
+
+  - Function with the largest signature take 3 arguments, while the median is 1.
+
+  - Largest function has 38 statements in it, while the median is 11.
+
+  - The most complex function has a cyclomatic complexity value of 7 while the median is 2.
 
 ### Unfixed Bugs
 
