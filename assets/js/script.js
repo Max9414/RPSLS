@@ -82,7 +82,7 @@ function cardsCreation(game) {
 
 function solution (player, pc) {
     if (player == pc ) return "it's a tie!";
-    winCondition = {
+    let winCondition = {
       rock: ['lizard', 'scissors'],
       lizard: ['spock', 'paper'],
       spock: ['scissors', 'rock'],
@@ -191,7 +191,7 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
       <h1>It's a tie!!</h1>`
     }
     game.innerHTML += `<div id="win-lose-div" class="showcase-cards"></div>`
-    winner = document.getElementById('win-lose-div');
+    let winner = document.getElementById('win-lose-div');
     winner.innerHTML += `
       <button class="card">
         <img src="assets/image/${playerCard}.png" alt="${playerCard}"  id="${playerCard}">
