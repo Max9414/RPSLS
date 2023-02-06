@@ -4,7 +4,7 @@ const SIGNS = {
   scissors: 'scissors',
   lizard: 'lizard',
   spock: 'spock'
-}
+};
 
 let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
@@ -70,7 +70,7 @@ function cardsCreation(game) {
     game.innerHTML+=`
       <button class="card">
       <img src="assets/image/${cards[randomNumber[j]]}.png" alt="${cards[randomNumber[j]]}"  id="${cards[randomNumber[j]]}">
-      </button>`
+      </button>`;
 }
   return game;
 }
@@ -88,7 +88,7 @@ function solution (player, pc) {
       spock: ['scissors', 'rock'],
       scissors: ['paper', 'lizard'],
       paper: ['rock', 'spock'],
-    }
+    };
     return winCondition[player].includes(pc) ? "The player wins!" : "The pc wins!";
 }
 
@@ -105,10 +105,10 @@ function fullSelection(event) {
     let index = selectedCards.indexOf(playerCard);
     if (index === -1) {
       selectedCards.push(playerCard);
-      document.getElementById(playerCard).src = "assets/image/b" + playerCard + ".png"
+      document.getElementById(playerCard).src = "assets/image/b" + playerCard + ".png";
     } else { 
       selectedCards.splice(index, 1);
-      document.getElementById(playerCard).src = "assets/image/" + playerCard + ".png"
+      document.getElementById(playerCard).src = "assets/image/" + playerCard + ".png";
     }
     console.log(selectedCards);
     console.log(selectedCards.length);
@@ -178,19 +178,19 @@ function cardSelected(event) {
  * played by both the pc and the user and will show on the top you win/lose/it's a tie"
  */
 function winnerLoserTiePage(playerCard, pcCard, sol) {
-  let game = document.getElementById('game-area')
+  let game = document.getElementById('game-area');
     game.classList.add('showcase-section');
     if (sol === 'The player wins!') {
       game.innerHTML = `
-      <h1>You win!!</h1>`
+      <h1>You win!!</h1>`;
     } else if (sol === 'The pc wins!') {
         game.innerHTML = `
-        <h1>You lose!!</h1>`
+        <h1>You lose!!</h1>`;
     } else {
       game.innerHTML = `
-      <h1>It's a tie!!</h1>`
+      <h1>It's a tie!!</h1>`;
     }
-    game.innerHTML += `<div id="win-lose-div" class="showcase-cards"></div>`
+    game.innerHTML += `<div id="win-lose-div" class="showcase-cards"></div>`;
     let winner = document.getElementById('win-lose-div');
     winner.innerHTML += `
       <button class="card">
@@ -198,7 +198,7 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
       </button>
       <button class="card">
         <img src="assets/image/${pcCard}.png" alt="${pcCard}"  id="${pcCard}">
-      </button>`
+      </button>`;
 if (gameType === 'original') {
   setTimeout(playOriginalGame, 2500);
 } else {
@@ -213,7 +213,7 @@ if (gameType === 'original') {
  */
 
 function winLoseTieFive(player, pc, solution) {
-  let game = document.getElementById('game-area')
+  let game = document.getElementById('game-area');
   game.innerHTML = ``;
   game.classList.add('showcase-section');
   for (let i=0; i<5; i++) {
@@ -270,7 +270,7 @@ function playOriginalGame(event) {
       <button class="card" >
         <img src="assets/image/spock.png" alt="spock" id="spock">
       </button>
-    </div>`
+    </div>`;
     document.getElementById('home-btn').addEventListener('click', homeGenerator);
 
     let cards = document.getElementsByClassName('card');
@@ -408,7 +408,7 @@ function gamesExplained(event) {
   </div>
   <div>
     <button id="home-btn">Home</button>
-  </div>`
+  </div>`;
   document.getElementById('home-btn').addEventListener('click', homeGenerator);
 }
 
