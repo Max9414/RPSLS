@@ -200,9 +200,9 @@ The live link can be found here - https://max9414.github.io/paper-scissor-spock/
 
 ## [Credits](#table-of-content) 
 
-I got the main picture in the homepage from [Blog]https://www.akshaybahadur.com/post/rock-paper-scissors-lizard-spock .
+I got the main picture in the homepage from [Blog](https://www.akshaybahadur.com/post/rock-paper-scissors-lizard-spock) .
 
-The single signs have been clipped from a [video]https://www.youtube.com/watch?v=zjoVuV8EeOU on youtube creator Samuel Dozett.
+The single signs have been clipped from a [video](https://www.youtube.com/watch?v=zjoVuV8EeOU) on youtube creator Samuel Dozett.
 
 ### [Content](#table-of-content) 
 
