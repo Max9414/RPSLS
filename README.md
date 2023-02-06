@@ -163,7 +163,7 @@ Asked friends to test the game and play around with it to check that everything 
 
 I started this process pretty early in the creation as I thought it would have helped me improving the functions and it did!
 
-Many bugs have been found for small mistakes in the code but now, even if still really too long, everything works smoothly.  
+Many bugs have been found for small mistakes in the code but now everything works smoothly.  
 
 
 ### [Validator Testing](#table-of-content) 
