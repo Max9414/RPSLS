@@ -9,6 +9,7 @@ RPSLS is an easy game designed for any type of audience, especially for fans of 
 
 # [Visit the game here](https://max9414.github.io/RPSLS/)
 
+# All the titles bring back to the Table of Content
 
 # Table of Content
 1. [Project Goals](#project-goals)
@@ -36,18 +37,18 @@ RPSLS is an easy game designed for any type of audience, especially for fans of 
 10. [Media](#media)
 
 
-## Project Goals
+## [Project Goals](#table-of-content)
 
 RPSLS aims to let people enjoy an easy game with different challenges, enjoy a quick, fast paced and easy to understand game.
 
-### Site Owner Goals 
+### [Site Owner Goals](#table-of-content) 
 - Test User luck
 - Provide different game options
 - Provide new game function to reset score
 - Provide entertainment
 - Show both user and pc scores
 
-### User Goals
+### [User Goals](#table-of-content)
 - Easily navigate through the game
 - Understand the rules of the game
 - Get cards upon starting the game
@@ -55,13 +56,13 @@ RPSLS aims to let people enjoy an easy game with different challenges, enjoy a q
 - See score while playing the game and upon completion of the game
 - Easily reset the game
 
-## Features 
+## [Features](#table-of-content) 
 
 Fun, challenges and explanations all within sight and reachable with an easy click!
 
-### Existing Features
+### [Existing Features](#table-of-content)
 
-#### Navigation Bar
+#### [Navigation Bar](#table-of-content)
   - Mutable navigation bar, changing on the different pages to bring the game experience to the next level!
   - On the main page you can access all the 3 different games with each specific button.
 
@@ -77,20 +78,20 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Nav Bar random](assets/image/readmeimages/navrandom.png)
 
-- #### The landing page
+- #### [The landing page](#table-of-content)
 
   - As I focused mainly on the logic with javascript, the landing page is really simple, with a title, a subtitle, buttons to play and a pic to show briefly which card wins against which.
 
 ![Landing Page](assets/image/readmeimages/fullgame.png)
 
-- #### Game Area section
+- #### [Game Area section](#table-of-content)
 
   - This section is the only section in the page that changes, mutating its HTML on every different button interaction
   - It has an easy grey colour background to help the user see clearly which one is the game section
 
 ![Game Area](assets/image/readmeimages/mainpage.png)
 
-- #### Original game section
+- #### [Original game section](#table-of-content)
 
   - This section will allow the user to play the original game or bring them back to the homepage.
   - With every interaction with the card, a popup message will appear asking to confirm or cancel the choice.
@@ -98,7 +99,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Original Game](assets/image/readmeimages/maingame.png)
 
-- #### Random game section
+- #### [Random game section](#table-of-content)
 
   - This section will allow the user to play the random game, bring them back to the homepage or reshuffle the cards.
   - With every interaction with the card, a popup message will appear asking to confirm or cancel the choice.
@@ -107,7 +108,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Random Game](assets/image/readmeimages/randomgame.png)
 
-- #### 5vs5 game section
+- #### [5vs5 game section](#table-of-content)
 
   - This section will allow the user to play the 5vs5 game, bring them back to the homepage or reset the choice.
   - When all the 5 cards will be selected, a popup message will appear asking to confirm or cancel the choice.
@@ -117,7 +118,7 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![5vs5 Game](assets/image/readmeimages/5vs5game.png)
 
-- #### The results pages
+- #### [The results pages](#table-of-content)
 
   - This section shows the results
   - For Random and Original, the page is shown for 2.5 seconds and shows if user won/lost/tied and the cards played
@@ -127,30 +128,30 @@ Fun, challenges and explanations all within sight and reachable with an easy cli
 
 ![Results Page](assets/image/readmeimages/5resultspage.png)
 
-- #### The Footer 
+- #### [The Footer](#table-of-content) 
 
   - The footer section has a counter for both player and PC that increases with every victory.
 
 ![Footer](assets/image/readmeimages/footer.png)
 
-- #### The Header 
+- #### [The Header](#table-of-content) 
 
   - The header section is used to reset the score on the footer if player wants to reset the score.
 
 ![Header](assets/image/readmeimages/header.png)
 
-- #### Explanation section
+- #### [Explanation section](#table-of-content)
 
   - The Explanation section explains the various games to the user, so they can choose whatever they prefer.
   - It presents at the end a "Home" button to go back to the main page.
 
 ![Explanation section](assets/image/readmeimages/gamesinfo.png)
 
-### Features Left to Implement
+### [Features Left to Implement](#table-of-content)
 
 - Nothing for now. 
 
-## Testing 
+## [Testing](#table-of-content) 
 
 Asked friends to test the game and play around with it to check that everything works smoothly.
 
@@ -159,7 +160,7 @@ I started this process pretty early in the creation as I thought it would have h
 Many bugs have been found for small mistakes in the code but now, even if still really too long, everything works smoothly.  
 
 
-### Validator Testing 
+### [Validator Testing](#table-of-content) 
 
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmax9414.github.io%2Fpaper-scissor-spock%2Findex.html)
@@ -177,11 +178,11 @@ Many bugs have been found for small mistakes in the code but now, even if still 
 
   - The most complex function has a cyclomatic complexity value of 7 while the median is 2.
 
-### Unfixed Bugs
+### [Unfixed Bugs](#table-of-content)
 
 At the moment there are no bugs I'm aware of.
 
-## Deployment 
+## [Deployment](#table-of-content) 
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
   - In the GitHub repository, navigate to the Settings tab 
@@ -191,17 +192,17 @@ At the moment there are no bugs I'm aware of.
 The live link can be found here - https://max9414.github.io/paper-scissor-spock/
 
 
-## Credits 
+## [Credits](#table-of-content) 
 
 I got the main picture in the homepage from [Blog]https://www.akshaybahadur.com/post/rock-paper-scissors-lizard-spock .
 
 The single signs have been clipped from a [video]https://www.youtube.com/watch?v=zjoVuV8EeOU on youtube creator Samuel Dozett.
 
-### Content 
+### [Content](#table-of-content) 
 
 - The game idea is taken from the serie The Bigbang Theory, as far as I know
 
-### Media
+### [Media](#table-of-content)
 
 Check the Credits section
 
