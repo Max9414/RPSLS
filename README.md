@@ -40,7 +40,7 @@ RPSLS is an easy game designed for any type of audience, especially for fans of 
 
 ## [Project Goals](#table-of-content)
 
-RPSLS aims to let people enjoy an easy game with different challenges, enjoy a quick, fast paced and easy to understand game.
+RPSLS aims to let people enjoy an easy game with different challenges, enjoy a quick, fast paced and easy to understand game. The idea was taken from the suggested websites to create and drew on a couple of papers before starting coding.
 
 ### [Site Owner Goals](#table-of-content) 
 - Test User luck
