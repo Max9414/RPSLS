@@ -1,14 +1,6 @@
 
 let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
-const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
-
 window.onload = (event) => {
     console.log("page is fully loaded");
     // Event listeners for the 3 different games and the games explanation
@@ -149,9 +141,9 @@ function fullSelection(event) {
         document.getElementById('spock').src = "assets/image/spock.png";
       }
        else {
-        swalWithBootstrapButtons.fire(
+        Swal.fire(
           'Cancelled',
-          'Your imaginary file is safe :)')
+          'Your selection has been resetted! :)')
         selectedCards = [] ;
         document.getElementById('rock').src = "assets/image/rock.png";
         document.getElementById('paper').src = "assets/image/paper.png";
@@ -197,6 +189,9 @@ function cardSelected(event) {
         } else {winnerLoserTiePage(playerCard, pcCard, sol);}
     } else {
         console.log("select again");
+        Swal.fire(
+          'Cancelled!',
+          'Your selection has been resetted! :)')
     }
   })
 }
