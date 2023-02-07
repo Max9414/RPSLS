@@ -18,14 +18,14 @@ let selectedCards = [];
 let gameType = '';
 
 /**
- * This function will be used to generate a random pick for the pc for all games 
+ * It will be used to generate a random pick for the pc for all games 
  */
 function randomCard() {
   return cards[Math.floor(Math.random() * cards.length)];
 }
 
 /** 
- * This function randomly generates 5 numbers from 0 to 4 using math functions and a for loop.
+ * Randomly generates 5 numbers from 0 to 4 using math functions and a for loop.
  * It then generates an array of cards based on the random numbers generated.
  */
 
@@ -35,17 +35,14 @@ function fiveRandomGenerated() {
   let randomCards = [];
   for (let i = 0; i < 5; i++) {
     let randomIndex = Math.floor(Math.random() * numbers.length);
-    randomNumber.push(numbers[randomIndex]);
+    randomCards.push(cards[numbers[randomIndex]]);
     numbers.splice(randomIndex, 1);
-  }
-  for (let j = 0; j < 5; j++) {
-    randomCards.push(cards[randomNumber[j]]);
   }
   return randomCards;
 }
 
 /**
- * This function builds the html adding innerHTML depending on the randomly generated cards.
+ * It builds the html adding innerHTML depending on the randomly generated cards.
  */
 
 function cardsCreation(game) {
@@ -68,7 +65,7 @@ function cardsCreation(game) {
 }
 
 /**
- * This function will show the result of the choices, player vs pc.
+ * It will show the result of the choices, player vs pc.
  * It works, with a for function, for the 5v5 game as well.
  */
 
