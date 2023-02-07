@@ -204,6 +204,8 @@ I got the main picture in the homepage from [Blog](https://www.akshaybahadur.com
 
 The single signs have been clipped from a [video](https://www.youtube.com/watch?v=zjoVuV8EeOU) on youtube creator Samuel Dozett.
 
+The popup message window used is from [SweetAlert2](https://sweetalert2.github.io/#examples).
+
 ### [Content](#table-of-content) 
 
 - The game idea is taken from the serie The Bigbang Theory, as far as I know
