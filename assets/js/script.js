@@ -31,7 +31,6 @@ function randomCard() {
 
 function fiveRandomGenerated() {
   let numbers = [0, 1, 2, 3, 4];
-  let randomNumber = [];
   let randomCards = [];
   for (let i = 0; i < 5; i++) {
     let randomIndex = Math.floor(Math.random() * numbers.length);
@@ -47,19 +46,15 @@ function fiveRandomGenerated() {
 
 function cardsCreation(game) {
   let numbers = [0, 1, 2, 3, 4];
-  let randomNumber = [];
   let randomCards = [];
   for (let i = 0; i < 3; i++) {
     let randomIndex = Math.floor(Math.random() * numbers.length);
-    randomNumber.push(numbers[randomIndex]);
-    numbers.splice(randomIndex, 1);
-  }
-  for (let j = 0; j < 3; j++) {
-    randomCards.push(cards[randomNumber[j]]);
+    randomCards.push(cards[numbers[randomIndex]]);
     game.innerHTML += `
       <button class="card">
-      <img src="assets/image/${cards[randomNumber[j]]}.png" alt="${cards[randomNumber[j]]}"  id="${cards[randomNumber[j]]}">
+      <img src="assets/image/${cards[numbers[randomIndex]]}.png" alt="${cards[numbers[randomIndex]]}"  id="${cards[numbers[randomIndex]]}">
       </button>`;
+    numbers.splice(randomIndex, 1);
   }
   return game;
 }
