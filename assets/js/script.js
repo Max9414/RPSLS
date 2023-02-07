@@ -141,9 +141,10 @@ function fullSelection(event) {
         document.getElementById('spock').src = "assets/image/spock.png";
       }
        else {
-        Swal.fire(
-          'Cancelled',
-          'Your selection has been resetted! :)')
+        Swal.fire({
+          timer: 1500,
+          title:'Cancelled',
+          text:'Your selection has been resetted! :)'})
         selectedCards = [] ;
         document.getElementById('rock').src = "assets/image/rock.png";
         document.getElementById('paper').src = "assets/image/paper.png";
