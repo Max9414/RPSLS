@@ -183,6 +183,9 @@ I started this process pretty early in the creation as I thought it would have h
 
 Many bugs have been found for small mistakes in the code but now everything works smoothly.  
 
+The hardest logic error to find was in the 5v5 game where I created an array of v for victory and n for losses and it was of course not saving ties, giving a visual error to the user, aka showing the wrong order of wins, losses and ties.
+Fixed adding a t value for ties.
+
 
 ### [Validator Testing](#table-of-content) 
 
