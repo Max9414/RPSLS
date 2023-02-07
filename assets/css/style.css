@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
     text-align: center;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
@@ -45,6 +45,12 @@ footer {
 
 .biggest {
     font-size: 4rem;
+}
+
+.card {
+    border: none;
+    outline: none;
+    background: none;
 }
 
 .card img {
@@ -85,7 +91,7 @@ button {
 
 /* Layout for the original game and possibly the others too. Might be subject to changes */
 .cards-bttm {
-    text-align:center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -94,7 +100,7 @@ button {
 
 /* Layout for the winner-loser showcase and for the div/divs */
 .showcase-section {
-    text-align:center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -129,7 +135,10 @@ button {
 }
 
 @media screen and (max-width: 1200px) {
-    header, footer, button {
+
+    header,
+    footer,
+    button {
         font-size: 1.5rem;
     }
 
@@ -141,10 +150,12 @@ button {
         height: 15vh;
         width: 20vw;
     }
+
     .img-div img {
         max-height: 40vh;
         max-width: 70vw;
     }
+
     .smaller img {
         height: 6vh;
         width: 10vw;
@@ -152,7 +163,10 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-    header, footer, button {
+
+    header,
+    footer,
+    button {
         font-size: 1rem;
     }
 
@@ -163,6 +177,7 @@ button {
     header {
         min-height: 100px;
     }
+
     h2 {
         font-size: 1rem;
     }
@@ -174,13 +189,17 @@ button {
 }
 
 @media screen and (max-width: 400px) {
-    header, footer, button {
+
+    header,
+    footer,
+    button {
         font-size: 0.9rem;
     }
 
     header {
         min-height: 100px;
     }
+
     h2 {
         font-size: 0.9rem;
     }

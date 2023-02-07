@@ -38,12 +38,12 @@ function randomGeneratedCards(x) {
  * It builds the html adding innerHTML depending on the randomly generated cards.
  */
 function randomCardsCreator(game) {
-  let randomCards = randomGeneratedCards(3)
+  let randomCards = randomGeneratedCards(3);
   for (let i = 0; i < 3; i++) {
     game.innerHTML += `
     <button class="card">
       <img src="assets/image/${randomCards[i]}.png" alt="${randomCards[i]}"  id="${randomCards[i]}">
-    </button>`
+    </button>`;
   };
   return game;
 }
@@ -53,13 +53,13 @@ function randomCardsCreator(game) {
  * It works, with a for function, for the 5v5 game as well.
  */
 function solution(player, pc) {
-  if (player == pc) return "it's a tie!";
+  if (player.toLowerCase() === pc.toLowerCase()) return "it's a tie!";
   let winCondition = {
     rock: ['lizard', 'scissors'],
-    lizard: ['spock', 'paper'],
-    spock: ['scissors', 'rock'],
-    scissors: ['paper', 'lizard'],
     paper: ['rock', 'spock'],
+    scissors: ['paper', 'lizard'],
+    lizard: ['spock', 'paper'],
+    spock: ['scissors', 'rock']
   };
   return winCondition[player].includes(pc) ? "The player wins!" : "The pc wins!";
 }
@@ -95,15 +95,17 @@ function fullSelection(event) {
       if (result.isConfirmed) {
         let finalSolution = [];
         let fiveRandom = randomGeneratedCards(5);
+        console.log(selectedCards, fiveRandom)
         for (let i = 0; i < fiveRandom.length; i++) {
           let sol = solution(selectedCards[i], fiveRandom[i]);
+          console.log(sol)
           if (sol === "The player wins!") {
             document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
             finalSolution.push('v');
           } else if (sol === "The pc wins!") {
             document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
             finalSolution.push('n');
-          } else {}
+          } 
         }
         winLoseTieFive(selectedCards, fiveRandom, finalSolution);
         selectedCards = [];
@@ -117,7 +119,7 @@ function fullSelection(event) {
           timer: 1300,
           title: 'Cancelled',
           text: 'Your selection has been resetted! :)'
-        })
+        });
         selectedCards = [];
         document.getElementById('rock').src = "assets/image/rock.png";
         document.getElementById('paper').src = "assets/image/paper.png";
@@ -125,9 +127,9 @@ function fullSelection(event) {
         document.getElementById('lizard').src = "assets/image/lizard.png";
         document.getElementById('spock').src = "assets/image/spock.png";
       }
-    })
+    });
 
-  } else {}
+  }
 }
 
 /**
@@ -164,9 +166,9 @@ function cardSelected(event) {
         timer: 1300,
         title: 'Cancelled!',
         text: 'Your selection has been resetted! :)'
-      })
+      });
     }
-  })
+  });
 }
 
 /**
