@@ -23,39 +23,33 @@ let gameType = '';
 function randomCard() {
   return cards[Math.floor(Math.random() * cards.length)];
 }
-
 /** 
  * Randomly generates 5 numbers from 0 to 4 using math functions and a for loop.
  * It then generates an array of cards based on the random numbers generated.
  */
-
-function fiveRandomGenerated() {
+function randomGeneratedCards(x) {
   let numbers = [0, 1, 2, 3, 4];
   let randomCards = [];
-  for (let i = 0; i < 5; i++) {
+  // loop to create the random number of cards needed
+  for (let i = 0; i < x; i++) {
     let randomIndex = Math.floor(Math.random() * numbers.length);
     randomCards.push(cards[numbers[randomIndex]]);
     numbers.splice(randomIndex, 1);
   }
   return randomCards;
 }
-
 /**
  * It builds the html adding innerHTML depending on the randomly generated cards.
  */
-
 function cardsCreation(game) {
-  let numbers = [0, 1, 2, 3, 4];
-  let randomCards = [];
-  for (let i = 0; i < 3; i++) {
-    let randomIndex = Math.floor(Math.random() * numbers.length);
-    randomCards.push(cards[numbers[randomIndex]]);
+  let randomCards = randomGeneratedCards(3)
+  console.log(randomCards);
+  for (let i=0; i<3; i++) {
     game.innerHTML += `
-      <button class="card">
-      <img src="assets/image/${cards[numbers[randomIndex]]}.png" alt="${cards[numbers[randomIndex]]}"  id="${cards[numbers[randomIndex]]}">
-      </button>`;
-    numbers.splice(randomIndex, 1);
-  }
+    <button class="card">
+      <img src="assets/image/${randomCards[i]}.png" alt="${randomCards[i]}"  id="${randomCards[i]}">
+    </button>`
+  };
   return game;
 }
 
@@ -109,7 +103,7 @@ function fullSelection(event) {
     }).then((result) => {
       if (result.isConfirmed) {
         let finalSolution = [];
-        let fiveRandom = fiveRandomGenerated();
+        let fiveRandom = randomGeneratedCards(5);
         console.log(fiveRandom);
         for (let i = 0; i < fiveRandom.length; i++) {
           let sol = solution(selectedCards[i], fiveRandom[i]);
