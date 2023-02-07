@@ -1,7 +1,6 @@
 let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 window.onload = (event) => {
-  console.log("page is fully loaded");
   // Event listeners for the 3 different games and the games explanation
   document.getElementById('game-btn1').addEventListener('click', playOriginalGame);
   document.getElementById('game-btn2').addEventListener('click', playFivevFiveGame);
@@ -40,7 +39,6 @@ function randomGeneratedCards(x) {
  */
 function randomCardsCreator(game) {
   let randomCards = randomGeneratedCards(3)
-  console.log(randomCards);
   for (let i = 0; i < 3; i++) {
     game.innerHTML += `
     <button class="card">
@@ -75,7 +73,6 @@ function solution(player, pc) {
  */
 function fullSelection(event) {
   let playerCard = event.target.id;
-  console.log(playerCard);
   let index = selectedCards.indexOf(playerCard);
   if (index === -1) {
     selectedCards.push(playerCard);
@@ -84,8 +81,6 @@ function fullSelection(event) {
     selectedCards.splice(index, 1);
     document.getElementById(playerCard).src = "assets/image/" + playerCard + ".png";
   }
-  console.log(selectedCards);
-  console.log(selectedCards.length);
   if (selectedCards.length == 5) {
     // let confirmed = confirm ("Are you sure you want to select these cards?");
     // if (confirmed)
@@ -100,15 +95,12 @@ function fullSelection(event) {
       if (result.isConfirmed) {
         let finalSolution = [];
         let fiveRandom = randomGeneratedCards(5);
-        console.log(fiveRandom);
         for (let i = 0; i < fiveRandom.length; i++) {
           let sol = solution(selectedCards[i], fiveRandom[i]);
           if (sol === "The player wins!") {
-            console.log(sol);
             document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
             finalSolution.push('v');
           } else if (sol === "The pc wins!") {
-            console.log(sol);
             document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
             finalSolution.push('n');
           } else {}
@@ -143,7 +135,6 @@ function fullSelection(event) {
 // card selection check
 function cardSelected(event) {
   let playerCard = event.target.id;
-  console.log(playerCard);
   let pcCard = randomCard();
   let sol = solution(playerCard, pcCard);
   Swal.fire({
@@ -158,20 +149,16 @@ function cardSelected(event) {
     confirmButtonText: 'Yes, select it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      console.log(pcCard);
       if (sol === "The player wins!") {
-        console.log(sol);
         document.getElementById('player-score').innerHTML = parseInt(document.getElementById('player-score').innerHTML) + 1;
         winnerLoserTiePage(playerCard, pcCard, sol);
       } else if (sol === "The pc wins!") {
-        console.log(sol);
         document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
         winnerLoserTiePage(playerCard, pcCard, sol);
       } else {
         winnerLoserTiePage(playerCard, pcCard, sol);
       }
     } else {
-      console.log("select again");
       Swal.fire({
         timer: 1300,
         title: 'Cancelled!',
@@ -282,12 +269,10 @@ function playOriginalGame(event) {
   document.getElementById('home-btn').addEventListener('click', homeGenerator);
 
   let cards = document.getElementsByClassName('card');
-  console.log(cards);
 
   // Event listener for chosen card by player
   for (let j = 0; j < cards.length; j++) {
     cards[j].addEventListener('click', cardSelected);
-    console.log(cards[j]);
   }
 }
 
@@ -330,7 +315,6 @@ function playFivevFiveGame(event) {
 
 
   let cards = document.getElementsByClassName('card');
-  console.log(cards);
 
   // Event listener with function to wait for all 5 cards to be selected
   for (let j = 0; j < cards.length; j++) {
