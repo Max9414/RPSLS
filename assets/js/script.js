@@ -149,12 +149,12 @@ function cardSelected(event) {
     console.log(playerCard);
     let pcCard = randomCard();
     let sol = solution(playerCard, pcCard);
-    // let confirmed = confirm ("Are you sure you want to select this card?");
-    // let confirmed = 
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
-      icon: `assets/image/${playerCard}.png`,
+      imageUrl: `assets/image/${playerCard}.png`,
+      imageWidth: 250,
+      imageHeight: 200,
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
