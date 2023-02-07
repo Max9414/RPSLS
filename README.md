@@ -16,6 +16,9 @@ RPSLS is an easy game designed for any type of audience, especially for fans of 
    - [Site Owner Goals](#site-owner-goals)
    - [User Goals](#user-goals)
    - [Target Audience](#target-audience)
+   - [User Stories](#user-stories)
+     - [First time user](#first-time-user)
+     - [Returning User](#returning-user)
 2. [Features](#features)
 3. [Existing Features](#existing-features)
    - [Navigation Bar](#navigation-bar)
@@ -61,6 +64,21 @@ RPSLS aims to let people enjoy an easy game with different challenges, enjoy a q
 - The Bigbang Theory fans
 - Rock paper scissors fans searching for a more challenging version
 - Whoever needs a little brain restart
+
+### [User Stories](#table-of-content)
+
+#### [First-time User](#table-of-content)
+- As a first-time visitor I want to:
+  - Information about the game to decide which game to play
+  - See Pictures that shows the game concept
+  - See winning figures
+  - Easily understand the games and buttons
+  - Easily navigate through the pages
+#### [Returning User](#table-of-content)
+- As a returning-user I want to:
+  - Easily play the game
+  - Easily reset and do a new game
+  - Navigate smoothly between the known pages
 
 ## [Features](#table-of-content) 
 
@@ -185,7 +203,7 @@ Many bugs have been found for small mistakes in the code but now everything work
   - The most complex function has a cyclomatic complexity value of 7 while the median is 2.
 - JSHint update
   - Refactored some functions and the score improved
-  
+
   - There are 17 functions in this file.
 
   - Function with the largest signature take 3 arguments, while the median is 1.
