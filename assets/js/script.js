@@ -106,8 +106,17 @@ function fullSelection(event) {
     console.log(selectedCards);
     console.log(selectedCards.length);
     if (selectedCards.length == 5) {
-      let confirmed = confirm ("Are you sure you want to select these cards?");
-      if (confirmed) {
+      // let confirmed = confirm ("Are you sure you want to select these cards?");
+      // if (confirmed)
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, select it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
         let finalSolution = [];
         let fiveRandom = fiveRandomGenerated();
         console.log(fiveRandom);
@@ -122,7 +131,7 @@ function fullSelection(event) {
           document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
           finalSolution.push('n');
         } else {}
-       }
+       }    
         winLoseTieFive(selectedCards, fiveRandom, finalSolution);
         selectedCards = [];
         document.getElementById('rock').src = "assets/image/rock.png";
@@ -130,16 +139,20 @@ function fullSelection(event) {
         document.getElementById('scissors').src = "assets/image/scissors.png";
         document.getElementById('lizard').src = "assets/image/lizard.png";
         document.getElementById('spock').src = "assets/image/spock.png";
-      } else {
+      }
+       else {
         selectedCards = [] ;
         document.getElementById('rock').src = "assets/image/rock.png";
         document.getElementById('paper').src = "assets/image/paper.png";
         document.getElementById('scissors').src = "assets/image/scissors.png";
         document.getElementById('lizard').src = "assets/image/lizard.png";
         document.getElementById('spock').src = "assets/image/spock.png";
-      }
-    } else {}
+       }
+      })
+
   }
+     else {}
+}
 
 
 
