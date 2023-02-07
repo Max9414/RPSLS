@@ -189,9 +189,10 @@ function cardSelected(event) {
         } else {winnerLoserTiePage(playerCard, pcCard, sol);}
     } else {
         console.log("select again");
-        Swal.fire(
-          'Cancelled!',
-          'Your selection has been resetted! :)')
+        Swal.fire({
+          timer: 1500,
+          title:'Cancelled!',
+          text:'Your selection has been resetted! :)'})
     }
   })
 }
