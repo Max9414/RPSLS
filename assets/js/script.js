@@ -149,8 +149,18 @@ function cardSelected(event) {
     console.log(playerCard);
     let pcCard = randomCard();
     let sol = solution(playerCard, pcCard);
-    let confirmed = confirm ("Are you sure you want to select this card?");
-    if (confirmed) {
+    // let confirmed = confirm ("Are you sure you want to select this card?");
+    // let confirmed = 
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: `assets/image/${playerCard}.png`,
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, select it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
         console.log(pcCard);
         if (sol === "The player wins!") {
           console.log(sol);
@@ -164,6 +174,7 @@ function cardSelected(event) {
     } else {
         console.log("select again");
     }
+  })
 }
 
 /**
