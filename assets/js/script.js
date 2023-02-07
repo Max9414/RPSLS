@@ -142,7 +142,7 @@ function fullSelection(event) {
       }
        else {
         Swal.fire({
-          timer: 1500,
+          timer: 1300,
           title:'Cancelled',
           text:'Your selection has been resetted! :)'})
         selectedCards = [] ;
@@ -191,7 +191,7 @@ function cardSelected(event) {
     } else {
         console.log("select again");
         Swal.fire({
-          timer: 1500,
+          timer: 1300,
           title:'Cancelled!',
           text:'Your selection has been resetted! :)'})
     }
@@ -225,9 +225,9 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
         <img src="assets/image/${pcCard}.png" alt="${pcCard}"  id="${pcCard}">
       </button>`;
 if (gameType === 'original') {
-  setTimeout(playOriginalGame, 2500);
+  setTimeout(playOriginalGame, 1500);
 } else {
-  setTimeout(playRandomGame, 2500);
+  setTimeout(playRandomGame, 1500);
 }
   
 }
@@ -263,7 +263,7 @@ function winLoseTieFive(player, pc, solution) {
         <h2>It's a tie!!</h2>` + end;
     }
   }
-  setTimeout(playFivevFiveGame, 5000);
+  setTimeout(playFivevFiveGame, 3000);
 }
 
 /**
