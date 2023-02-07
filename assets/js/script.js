@@ -49,15 +49,6 @@ function randomCardsCreator(game) {
   };
   return game;
 }
-/**
- * It will generate the cards from the cards array
- */
-function cardsCreation(x) {
-  game.innerHTML += `
-  <button class="card">
-    <img src="assets/image/${cards[x]}.png" alt="${cards[x]}"  id="${cards[x]}">
-  </button>`
-}
 
 /**
  * It will show the result of the choices, player vs pc.
