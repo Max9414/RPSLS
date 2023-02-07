@@ -105,7 +105,9 @@ function fullSelection(event) {
           } else if (sol === "The pc wins!") {
             document.getElementById('computer-score').innerHTML = parseInt(document.getElementById('computer-score').innerHTML) + 1;
             finalSolution.push('n');
-          } 
+          } else {
+            finalSolution.push('t');
+          }
         }
         winLoseTieFive(selectedCards, fiveRandom, finalSolution);
         selectedCards = [];
