@@ -9,10 +9,8 @@ window.onload = (event) => {
   //Added listener to reset the score
   document.getElementsByTagName('header')[0].addEventListener('click', resetPoints);
 };
-
 let selectedCards = [];
 let gameType = '';
-
 /**
  * It will be used to generate a random pick for the pc for all games 
  */
@@ -47,7 +45,6 @@ function randomCardsCreator(game) {
   };
   return game;
 }
-
 /**
  * It will show the result of the choices, player vs pc.
  * It works, with a for function, for the 5v5 game as well.
@@ -63,7 +60,6 @@ function solution(player, pc) {
   };
   return winCondition[player].includes(pc) ? "The player wins!" : "The pc wins!";
 }
-
 /**
  * 
  * This function will wait for all 5 cards to be selected and will allow user to deselect cards too
@@ -133,7 +129,6 @@ function fullSelection(event) {
 
   }
 }
-
 /**
  * Easy card selection checker with win/lose statement and score increase counter
  */
@@ -172,7 +167,6 @@ function cardSelected(event) {
     }
   });
 }
-
 /**
  * This function will transform the game-area section into a showcase of the cards
  * played by both the pc and the user and will show on the top you win/lose/it's a tie"
@@ -204,7 +198,6 @@ function winnerLoserTiePage(playerCard, pcCard, sol) {
   } else {
     setTimeout(playRandomGame, 1500);
   }
-
 }
 
 /**
