@@ -11,9 +11,6 @@ window.onload = (event) => {
   document.getElementsByTagName('header')[0].addEventListener('click', resetPoints);
 };
 
-
-
-
 let selectedCards = [];
 let gameType = '';
 
@@ -41,10 +38,10 @@ function randomGeneratedCards(x) {
 /**
  * It builds the html adding innerHTML depending on the randomly generated cards.
  */
-function cardsCreation(game) {
+function randomCardsCreator(game) {
   let randomCards = randomGeneratedCards(3)
   console.log(randomCards);
-  for (let i=0; i<3; i++) {
+  for (let i = 0; i < 3; i++) {
     game.innerHTML += `
     <button class="card">
       <img src="assets/image/${randomCards[i]}.png" alt="${randomCards[i]}"  id="${randomCards[i]}">
@@ -52,12 +49,20 @@ function cardsCreation(game) {
   };
   return game;
 }
+/**
+ * It will generate the cards from the cards array
+ */
+function cardsCreation(x) {
+  game.innerHTML += `
+  <button class="card">
+    <img src="assets/image/${cards[x]}.png" alt="${cards[x]}"  id="${cards[x]}">
+  </button>`
+}
 
 /**
  * It will show the result of the choices, player vs pc.
  * It works, with a for function, for the 5v5 game as well.
  */
-
 function solution(player, pc) {
   if (player == pc) return "it's a tie!";
   let winCondition = {
@@ -360,7 +365,7 @@ function playRandomGame(event) {
   game.classList.remove('showcase-section');
   game.classList.add('cards-bttm');
   let gameDiv = document.getElementById('game-area-div');
-  gameDiv += cardsCreation(gameDiv);
+  gameDiv += randomCardsCreator(gameDiv);
   let cards = document.getElementsByClassName('card');
   for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener('click', cardSelected);
