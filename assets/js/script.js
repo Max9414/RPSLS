@@ -1,10 +1,3 @@
-const SIGNS = {
-  rock: 'rock',
-  paper: 'paper',
-  scissors: 'scissors',
-  lizard: 'lizard',
-  spock: 'spock'
-};
 
 let cards = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
